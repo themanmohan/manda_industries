@@ -1,37 +1,37 @@
 import React from 'react'
 export default function AboutUsSection() {
-  const backgroundImageStyle = {
-    backgroundImage: 'url(https://res.cloudinary.com/hpnoardgude/image/upload/v1728202052/CropImage_cxpukm.jpg)',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    height: '400px',
-    alignItems: 'center',
-    position: "relative",
-    borderRadius: '10px',
-  };
+  // const backgroundImageStyle = {
+  //   backgroundImage: 'url(https://res.cloudinary.com/hpnoardgude/image/upload/v1728202052/CropImage_cxpukm.jpg)',
+  //   backgroundSize: 'cover',
+  //   backgroundPosition: 'center',
+  //   height: '400px',
+  //   alignItems: 'center',
+  //   position: "relative",
+  //   borderRadius: '10px',
+  // };
 
-  const backgroundImageStyle2 = {
-    position: 'absolute',
-    width: '100%',
-    height: 'inherit',
-    backgroundColor: "black",
-    backdropFilter: 'blur(8px)',
-    zIndex: 0,
-    opacity: 0.6,
-    borderRadius: '10px',
-  };
-  const backgroundImageStyle3 = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-  };
+  // const backgroundImageStyle2 = {
+  //   position: 'absolute',
+  //   width: '100%',
+  //   height: 'inherit',
+  //   backgroundColor: "black",
+  //   backdropFilter: 'blur(8px)',
+  //   zIndex: 0,
+  //   opacity: 0.6,
+  //   borderRadius: '10px',
+  // };
+  // const backgroundImageStyle3 = {
+  //   position: 'absolute',
+  //   top: '50%',
+  //   left: '50%',
+  //   transform: 'translate(-50%, -50%)',
+  // };
   return (
 
     <section className="max-container padding-x">
 
 
-      <div className="hero" style={backgroundImageStyle} >
+      {/* <div className="hero" style={backgroundImageStyle} >
         <div style={backgroundImageStyle2}>
 
         </div>
@@ -39,7 +39,7 @@ export default function AboutUsSection() {
         <div style={backgroundImageStyle3}>
           <h1 className="text-white font-bold text-4xl"> About Us</h1>
         </div>
-      </div>
+      </div> */}
 
       <div style={{
         marginBottom:"30px"
