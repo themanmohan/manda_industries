@@ -228,19 +228,19 @@ export default function Home() {
             [{
               id: 1,
               title: "Why Choose EPE",
-              category: "EPE",
+              // category: "EPE",
               published: "Manmohan",
               author: "Manmohan"
             }, {
               id: 1,
               title: "test2",
-              category: "asjgdja",
+              // category: "asjgdja",
               published: "nbvnv",
               author: "mannu"
             }, {
               id: 1,
               title: "test3",
-              category: "airbubble",
+              // category: "airbubble",
               published: "nbvnv",
               author: "mannu"
             }].map((value, index) => (
@@ -258,7 +258,7 @@ export default function Home() {
 
 
 function Post({ data }) {
-  const { id, title, category, img, published, author } = data;
+  const { id, title, published } = data;
   return (
     <div className="item">
       <div className="images">

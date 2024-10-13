@@ -53,14 +53,14 @@ function Article({ title, img, subtitle, description }){
 }
 
 
-function Author({ name, img, designation }: { name: string; img: string; designation: string }) {
-    return (
-      <div className="author flex py-5">
-          <Image src={img || ""} width={60} height={60} className="rounded-full"></Image>        
-          <div className="flex flex-col justify-center px-4">
-              <Link href={"/"}><p className="text-md font-bold text-gray-800 hover:text-gray-600">{name || "No Name"}</p></Link>
-              <span className="text-sm text-gray-500">{designation || ""}</span>
-          </div>
-      </div>
-    )
-  }
+// function Author({ name, img, designation }: { name: string; img: string; designation: string }) {
+//     return (
+//       <div className="author flex py-5">
+//           <Image src={img || ""} width={60} height={60} className="rounded-full"></Image>        
+//           <div className="flex flex-col justify-center px-4">
+//               <Link href={"/"}><p className="text-md font-bold text-gray-800 hover:text-gray-600">{name || "No Name"}</p></Link>
+//               <span className="text-sm text-gray-500">{designation || ""}</span>
+//           </div>
+//       </div>
+//     )
+//   }
