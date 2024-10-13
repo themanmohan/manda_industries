@@ -20,8 +20,7 @@ function BlogDetail() {
 
 
 export default BlogDetail
-
-function Article({ title, img, subtitle, description }){
+function Article({ title, img, subtitle, description }: { title: string; img: string; subtitle: string; description: string }) {
 
     return (
         <>
@@ -36,7 +35,7 @@ function Article({ title, img, subtitle, description }){
                     <p className='text-gray-500 font-krona text-xl text-center'>{subtitle || "No Title"}</p>
 
                     <div className="py-10">
-                        <Image src={img || "/"} width={900} height={600} style={{width:"100%"}}></Image>
+                        <Image src={img || "/"} width={900} height={600} alt="Blog Image" style={{width:"100%"}}></Image>
                     </div>
 
                     <div className="content info-text flex flex-col gap-4">
