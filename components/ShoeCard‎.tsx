@@ -2,7 +2,7 @@
 import Image from "next/image";
 
 interface ShoeCardProps {
-  imgURL: string;
+  imgURL: { thumbnail: string; bigShoe: string };
   changeBigShoeImage: (shoe: string) => void;
   bigShoeImg: string;
 }

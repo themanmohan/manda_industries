@@ -1,8 +1,7 @@
 "use client"
-import { useState } from "react";
 import Image from "next/image";
 import { shoes } from "../constants";
-import { Button, ShoeCard, Stats } from "../components";
+import { Button, Stats } from "../components";
 import CustomerReviews from "@/sections/CustomerReviews";
 import Link from "next/link"
 import Carousel from 'react-multi-carousel';
@@ -13,7 +12,7 @@ import {  AIRBUBBLE1, AIRBUBBLE2 , EPE1,EPE2} from "@/assets/images"
 
 export default function Home() {
 
-  const [bigShoeImg, setBigShoeImg] = useState(EPE1);
+  const bigShoeImg = EPE1.src;
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -47,7 +46,7 @@ export default function Home() {
   return (
     <>
       <section className="w-full flex xl:flex-row flex-col justify-center min-h-screen gap-10 max-container xl:padding-l wide:padding-r padding-b bg-white">
-        <div className="z-10 relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-10 -z-20">
+        <div className="z-10 relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-10">
           <p className="text-xl font-krona text-coral-red">
             Our Product
           </p>
@@ -86,14 +85,14 @@ export default function Home() {
           />
 
           <div className="flex sm:gap-6 gap-4 absolute -bottom-[5%] sm:left-[10%] max-sm:px-6">
-            {shoes.map((image, index) => (
+            {shoes.map((shoe, index) => (
               <div key={index}>
-                <ShoeCard
+                {/* <ShoeCard
                   index={index}
-                  imgURL={image}
-                  changeBigShoeImage={(shoe) => setBigShoeImg(shoe)}
+                  imgURL={shoe.thumbnail.src}
+                  changeBigShoeImage={(shoe: string) => setBigShoeImg(shoe)} // Added type annotation for clarity
                   bigShoeImg={bigShoeImg}
-                />
+                /> */}
               </div>
             ))}
           </div>
@@ -257,8 +256,8 @@ export default function Home() {
 
 
 
-function Post({ data }) {
-  const { id, title, published } = data;
+function Post({ data }: { data: object }) {
+  const { id, title, published } = data as { id: number; title: string; published: string };
   return (
     <div className="item">
       <div className="images">

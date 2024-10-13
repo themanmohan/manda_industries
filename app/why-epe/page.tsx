@@ -1,8 +1,8 @@
 "use client"
 import React from 'react';
 import { HeroBanner } from "@/components"
-import QualityCard from '@/components/QualityCard';
-import { services } from "@/constants";
+// import QualityCard from '@/components/QualityCard';
+// import { services } from "@/constants";
 import Image from "next/image"
 import picture1 from "@/assets/images/whyepe/Picture1.png"
 import picture2 from "@/assets/images/whyepe/Picture2.png"
@@ -16,9 +16,9 @@ function WhyEPE() {
             <div className='whitespace max-container bg-white airbubble_section' >
                 <h1 className='text-4xl font-krona text-center mb-10'>Comparison of <span className='text-coral-red'>Polyethylene</span> and <span className='text-coral-red'>Polystyrene</span> Based on Key Factors</h1>
                 <div className='max-container flex justify-center flex-wrap gap-9'>
-                    {services.map((service) => (
+                    {/* {services.map((service) => (
                         <QualityCard key={service.label} {...service} />
-                    ))}
+                    ))} */}
                 </div>
             </div>
 

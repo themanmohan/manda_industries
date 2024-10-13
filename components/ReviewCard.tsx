@@ -1,7 +1,7 @@
 "use client"
 import { star } from "../assets/icons";
 import Image from "next/image"
-const ReviewCard = ({ imgURL, customerName, rating, feedback }) => {
+const ReviewCard = ({ imgURL, customerName, rating, feedback }: { imgURL: string; customerName: string; rating: number; feedback: string }) => {
   return (
     <div className='flex justify-center items-center flex-col mt-5'>
       <Image

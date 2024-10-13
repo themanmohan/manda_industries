@@ -3,7 +3,7 @@ import React from 'react'
 function HeroBanner({
   imgULR="https://res.cloudinary.com/hpnoardgude/image/upload/v1728202052/CropImage_cxpukm.jpg",
   lableText
-}) {
+}: { imgULR?: string; lableText?: string }) {
     const backgroundImageStyle = {
         backgroundImage: `url(${imgULR})`,
         backgroundSize: 'cover',
@@ -33,12 +33,12 @@ function HeroBanner({
   return (
    
 
-      <div className="hero" style={backgroundImageStyle} >
-        <div style={backgroundImageStyle2}>
+      <div className="hero" style={{...backgroundImageStyle, position: 'relative'}} >
+        <div style={{...backgroundImageStyle2, position: 'absolute'}}>
 
         </div>
 
-        <div style={backgroundImageStyle3}>
+        <div style={{...backgroundImageStyle3, position: 'absolute'}}>
 
           <div className='flex items-center gap-3 justify-center'>
           <h1 className="text-white font-bold text-4xl font-krona">{lableText || " "}</h1>

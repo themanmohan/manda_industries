@@ -1,7 +1,7 @@
 "use client"
 import { useState, useEffect } from 'react';
 
-const StatsCounter = ({ finalCount, label }) => {
+const StatsCounter: React.FC<{ finalCount: number, label: string }> = ({ finalCount, label }) => {
   const [counter, setCounter] = useState(0);
 
   useEffect(() => {

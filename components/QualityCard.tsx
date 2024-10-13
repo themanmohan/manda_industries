@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from "next/image";
 
-const QualityCard = ({ imgURL, label, subtext }) => {
+const QualityCard = ({ imgURL, label, subtext }: { imgURL: string; label: string; subtext: string }) => {
     return (
       <div className='flex-1 sm:w-[300px] sm:min-w-[300px] w-full rounded-[10px] shadow-3xl px-6 py-5 cursor-pointer'>
         <div className='flex items-center gap-3'>
