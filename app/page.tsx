@@ -1,17 +1,14 @@
 "use client"
-import { Hero } from "@/sections";
 import { useState } from "react";
 import Image from "next/image";
 import { shoes } from "../constants";
-import { Button, ShoeCard, Stats, CarouselSection } from "../components";
-import { bigShoe1 } from "../assets/images";
-import { arrowRight } from "../assets/icons";
+import { Button, ShoeCard, Stats } from "../components";
 import CustomerReviews from "@/sections/CustomerReviews";
 import Link from "next/link"
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
-import { EPECatalog1, EPECatalog2, EPECatalog3, AIRBUBBLE1, AIRBUBBLE2 , EPE1,EPE2} from "@/assets/images"
+import {  AIRBUBBLE1, AIRBUBBLE2 , EPE1,EPE2} from "@/assets/images"
 
 
 export default function Home() {

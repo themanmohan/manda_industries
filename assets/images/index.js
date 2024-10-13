@@ -3,6 +3,11 @@ import EPE2 from "./product/EPE2.png"
 import AIRBUBBLE1 from "./product/AIRBUBBLE1.png"
 import AIRBUBBLE2 from "./product/AIRBUBBLE2.png"
 
+import customer1 from './customer1.jpeg'
+import customer2 from './customer2.svg'
+
+import offer from './offer.svg'
+
 
 import thumbnailBackground from './thumbnail-background.svg'
 
@@ -20,10 +25,14 @@ import EPECatalog2 from "./product/product_catalog/EPECatalog2.jpeg";
 import EPECatalog3 from "./product/product_catalog/EPECatalog3.jpeg";
 
 export {
+ 
 
+    customer1,
+    customer2,
+
+    offer,
 
     thumbnailBackground,
-
     EPE1,
     EPE2,
     AIRBUBBLE2,

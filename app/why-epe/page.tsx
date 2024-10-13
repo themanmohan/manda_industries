@@ -194,7 +194,7 @@ function WhyEPE() {
 
                         <ul className='info-text mb-2 pl-3'>
                             <li>- Many consumer durables, like televisions, refrigerators, and washing machines, come with warranties. Bad packaging increases the risk of *shipping damages*, prompting customers to file warranty claims that:</li>
-                            <li>- Add to the manufacturer's operational expenses.</li>
+                            <li>- Add to the manufacturers operational expenses.</li>
                             <li>- Lead to an increase in handling of returns and replacements, which can disrupt supply chain management.</li>
                         </ul>
 
