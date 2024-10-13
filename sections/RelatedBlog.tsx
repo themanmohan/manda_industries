@@ -47,14 +47,13 @@ export default function RalatedBlog() {
 }
 
 
-function Post({ data }) {
-
-    const { id, title, category, img, published, author } = data;
+function Post({ data }: { data: { id: number; title: string; category: string; img: string; published: string } }) {
+    const { id, title, category, img, published } = data;
 
     return (
         <div className="flex flex-col gap-5">
             <div className="image flex flex-col justify-start">
-                <Link href={`/posts/${id}`}><Image src={img || ""} className="rounded" style={{width:"300px"}} width={300} height={200} /></Link>
+                <Link href={`/posts/${id}`}><Image src={img || ""} alt={`Post ${id}`} className="rounded" style={{width:"300px"}} width={300} height={200} /></Link>
             </div>
             <div className="info flex justify-center flex-col">
                 <div className="cat">
