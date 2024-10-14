@@ -1,13 +1,13 @@
 "use client"
 import Image from "next/image";
 import { shoes } from "../constants";
-import { Button, Stats } from "../components";
+import { Button, Stats, ShoeCard } from "../components";
 import CustomerReviews from "@/sections/CustomerReviews";
 import Link from "next/link"
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
-import {  AIRBUBBLE1, AIRBUBBLE2 , EPE1,EPE2} from "@/assets/images"
+import { AIRBUBBLE1, AIRBUBBLE2, EPE1, EPE2 } from "@/assets/images"
 
 
 export default function Home() {
@@ -43,9 +43,10 @@ export default function Home() {
     title: "",
     desc: ""
   }]
+
   return (
     <>
-      <section className="w-full flex xl:flex-row flex-col justify-center min-h-screen gap-10 max-container xl:padding-l wide:padding-r padding-b bg-white">
+      {/* <section className="w-full flex xl:flex-row flex-col justify-center min-h-screen gap-10 max-container xl:padding-l wide:padding-r padding-b bg-white">
         <div className="z-10 relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-10">
           <p className="text-xl font-krona text-coral-red">
             Our Product
@@ -87,25 +88,25 @@ export default function Home() {
           <div className="flex sm:gap-6 gap-4 absolute -bottom-[5%] sm:left-[10%] max-sm:px-6">
             {shoes.map((shoe, index) => (
               <div key={index}>
-                {/* <ShoeCard
+                <ShoeCard
                   index={index}
                   imgURL={shoe.thumbnail.src}
                   changeBigShoeImage={(shoe: string) => setBigShoeImg(shoe)} // Added type annotation for clarity
                   bigShoeImg={bigShoeImg}
-                /> */}
+                />
               </div>
             ))}
           </div>
         </div>
 
-      </section>
+      </section> */}
 
       <section className="my-20 max-container whitespace">
         <h1 className="text-4xl font-krona text-center mb-10">OUR <span className="text-coral-red">PRODUCT</span></h1>
 
         <div className="sm:block md:flex gap-10 xl:flex mb-10">
 
-          <div className="w-1/3 flex  flex-col justify-center">
+          <div className="xl:w-1/3 md:w-1/2  flex  flex-col justify-center">
 
             <Carousel
 
@@ -118,7 +119,7 @@ export default function Home() {
               autoPlaySpeed={2000}
               customTransition="all .5"
               transitionDuration={500}
-              // containerClass="carousel-container"
+              containerClass="carousel-container"
               removeArrowOnDeviceType={["tablet", "mobile", "Desktop"]}
               dotListClass="custom-dot-list-style"
               arrows={false} >
@@ -126,7 +127,7 @@ export default function Home() {
               {productCatalog[0]?.images.map((imageURL, index) => (
                 <div key={index} className="bg-gray-400 w-full rounded-lg">
 
-                  <Image src={imageURL} height={500} alt="SDF" style={{height:"400px"}} className="mx-auto" />
+                  <Image src={imageURL} height={500} alt="SDF" style={{ height: "400px" }} className="mx-auto" />
 
                 </div>
               ))}
@@ -134,7 +135,7 @@ export default function Home() {
 
           </div>
 
-          <div className="w-2/3 flex flex-col justify-center" >
+          <div className="xl:w-2/3 md:w-1/2  flex flex-col justify-center" >
             <h1 className="text-2xl font-krona pb-5">AIR BUBBLE FORM</h1>
             <p className="pb-5 info-text">Air bubble film better known as bubble wrap is a Low Density Polyethylene Film (LDPE) based film commonly used for packaging and protecting delicate products. This multilayer film encloses air within a bubble shaped hemispherical outer layer of film providing cushioning effect to fragile products. The added advantages of Air Bubble Film is that it isolates vibration and shock, thus reducing damages during transit to the minimal</p>
             <Button label="Explore More" btnLink="airbubble" />
@@ -142,16 +143,16 @@ export default function Home() {
         </div>
 
 
-        <div className="sm:block md:flex xl:flex gap-10">
+        <div className="sm:flex md:flex xl:flex gap-10">
 
 
-          <div className="w-2/3 flex flex-col justify-center" >
+          <div className="xl:w-2/3 md:w-1/2  flex flex-col justify-center" >
             <h1 className="text-2xl font-krona pb-5">EPE FORM</h1>
             <p className="pb-5 info-text">Air bubble film better known as bubble wrap is a Low Density Polyethylene Film (LDPE) based film commonly used for packaging and protecting delicate products. This multilayer film encloses air within a bubble shaped hemispherical outer layer of film providing cushioning effect to fragile products. The added advantages of Air Bubble Film is that it isolates vibration and shock, thus reducing damages during transit to the minimal</p>
             <Button label="Explore More" />
           </div>
 
-          <div className="w-1/3 flex flex-col justify-center">
+          <div className="xl:w-1/3 md:w-1/2 sm:order-first  flex flex-col justify-center">
 
             <Carousel
 
@@ -164,15 +165,15 @@ export default function Home() {
               autoPlaySpeed={2000}
               customTransition="all .5"
               transitionDuration={500}
-              // containerClass="carousel-container"
+              containerClass="carousel-container"
               removeArrowOnDeviceType={["tablet", "mobile", "Desktop"]}
               dotListClass="custom-dot-list-style"
               arrows={false} >
 
-{productCatalog2[0]?.images.map((imageURL, index) => (
+              {productCatalog2[0]?.images.map((imageURL, index) => (
                 <div key={index} className="bg-gray-400 w-full rounded-lg">
 
-                  <Image src={imageURL} height={500} alt="SDF" style={{height:"400px"}} className="mx-auto" />
+                  <Image src={imageURL} height={500} alt="SDF" style={{ height: "400px" }} className="mx-auto" />
 
                 </div>
               ))}
@@ -182,17 +183,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="max-container bg-white whitespace why_epe_section boxShadow-3xl">
-        <h1 className="text-center text-4xl font-krona mb-5">WHY <span className="text-coral-red">EPE</span> ?</h1>
+       <section className="max-container bg-white whitespace why_epe_section boxShadow-3xl">
+        {/* <h1 className="text-center text-4xl font-krona mb-5">WHY <span className="text-coral-red">EPE</span> ?</h1> */}
 
         <div className="xl:flex md:block">
 
-          <div className="xl:w-1/3 md:w-full flex flex-col justify-center items-center pr-10">
+          <div className="xl:w-1/3 md:w-full flex flex-col justify-center items-center xl:pr-10 sm:pr-0 xl:mb-0">
             <h1 className="text-center text-4xl font-krona mb-5">Why <span className="text-coral-red">Choose EPE </span>over other</h1>
             <Button label="Know More" btnLink="why-epe" />
           </div>
 
-          <div className="xl:w-2/3 md:w-full xl:border-l-4  xl:mt-0 md:mt-10 xl:border-indigo-500 pl-10 ">
+          <div className="xl:w-2/3 md:w-full xl:border-l-4  xl:mt-0 md:mt-10 xl:border-indigo-500 xl:pl-10 sm:pl-0">
             <p className="info-text">     Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dicta blanditiis esse adipisci libero optio doloremque cum magnam repellendus rem, sed eos sit doloribus, numquam facere delectus pariatur eum quam!
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dicta blanditiis esse adipisci libero optio doloremque cum magnam repellendus rem, sed eos sit doloribus, numquam facere delectus pariatur eum quam!
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dicta blanditiis esse adipisci libero optio doloremque cum magnam repellendus rem, sed eos sit doloribus, numquam facere delectus pariatur eum quam!
@@ -215,7 +216,7 @@ export default function Home() {
         </p>
 
         <CustomerReviews />
-      </section>
+      </section> 
 
 
       <section className="max-container whitespace md:px-20 py-20 bg-white latest_post_section">
