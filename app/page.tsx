@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image";
-import { shoes } from "../constants";
-import { Button, Stats, ShoeCard } from "../components";
+// import { shoes } from "../constants";
+import { Button, } from "../components";
 import CustomerReviews from "@/sections/CustomerReviews";
 import Link from "next/link"
 import Carousel from 'react-multi-carousel';
@@ -12,7 +12,7 @@ import { AIRBUBBLE1, AIRBUBBLE2, EPE1, EPE2 } from "@/assets/images"
 
 export default function Home() {
 
-  const bigShoeImg = EPE1.src;
+  // const bigShoeImg = EPE1.src;
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
