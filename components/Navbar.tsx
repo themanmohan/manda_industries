@@ -111,7 +111,7 @@ export default function Navbar() {
           </Link>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Button label="Enquiry"  borderRadius='rounded-full' iconURL={LeftArrow} btnLink='/contact-us' />
+          <Button label="Enquiry"  borderRadius='rounded-full' iconURL={LeftArrow} btnLink='contact-us' />
         </div>
       </nav>
 

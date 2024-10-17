@@ -1,6 +1,8 @@
 import React from "react";
 import { Button } from "@/components"
 import { HeroBanner } from "@/components";
+import { services } from "@/constants";
+import ContactCard from "@/components/ContactCard";
 const Contact = () => {
   return (
     <>
@@ -198,6 +200,13 @@ const Contact = () => {
 
         </div>
 
+       
+        <section className='mt-10 max-container whitespace flex justify-center flex-wrap gap-9'>
+          {services.map((service) => (
+            <ContactCard key={service.label} {...service} />
+          ))}
+         </section>
+     
       </section >
     </>
   );

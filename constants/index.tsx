@@ -55,17 +55,17 @@ export const products = [
 export const services = [
     {
         imgURL: sustainability,
-        label: "Sustainability",
+        label: "Finance Contact",
         subtext: "Enjoy seamless shopping with our complimentary shipping service."
     },
     {
         imgURL: costEffiency,
-        label: "Cost Efficiency",
+        label: "Customer Contact",
         subtext: "Experience worry-free transactions with our secure payment options."
     },
     {
         imgURL: performance,
-        label: "Protective Performance",
+        label: "Management Contact",
         subtext: "Our dedicated team is here to assist you every step of the way."
     }
 ];
