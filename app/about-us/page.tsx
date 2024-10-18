@@ -18,7 +18,13 @@ export default function AboutUs() {
 
         </div>
 
-        <div className='bg-gray-400 w-full md:w-4/5 px-10 py-10  rounded-md mb-10'>
+        <div className="w-full md:w-4/5 pb-10 text-center">
+
+    <p className="mb-5 text-xl">Our EPE line can convert 2000 tons of plastics into Expanded Polyethylene Foam per annum. These films are made in thickness ranging from 0.5 mm to 150 mm. We also manufacture EPE blocks which are used by the Automobile industry, Glass Industry, Furniture Manufacturing, and the food processing industries. These blocks are a direct substitute of EPS blocks (Thermocol), which are polluting in nature.</p>
+    <p className="text-xl">Our fully integrated manufacturing process from raw materials to finished goods helps us maintain our superiority when it comes to Quality, Service & Pricing standards for our industry.</p>
+    </div>
+
+        <div className='bg-gray-400  w-[90%] px-10 py-10  rounded-md mb-10'>
           <div className="rounded-sm h-400 w-full">
             <h1 className="text-center text-2xl font-bold pb-3 text-coral-red font-krona">OUR GOAL</h1>
             <p className='text-xl'>The goal of M&A Industries is to be known as a leader in innovative packaging solutions, with continued focus on value engineering and building brand equity on the pillars of Quality, Service, Pricing & Constant Innovation</p>
@@ -29,12 +35,6 @@ export default function AboutUs() {
             <p className='text-xl'>We offer high-quality products and consistent support service to our customers and business partners. Our strategies were formulated in line with our focus on anticipation and satisfying our customer needs and constantly providing good service and prompt delivery. The strength and success of our Group can be directly attributable to our technical skill, innovation & creativity, long-standing dedicated employees, and our strong relationships with our customers and suppliers</p>
           </div>
 
-        </div>
-
-        <div className="w-[90%] pb-10">
-
-          <p className="mb-5 text-xl">Our EPE line can convert 2000 tons of plastics into Expanded Polyethylene Foam per annum. These films are made in thickness ranging from 0.5 mm to 150 mm. We also manufacture EPE blocks which are used by the Automobile industry, Glass Industry, Furniture Manufacturing, and the food processing industries. These blocks are a direct substitute of EPS blocks (Thermocol), which are polluting in nature.</p>
-          <p className="text-xl">Our fully integrated manufacturing process from raw materials to finished goods helps us maintain our superiority when it comes to Quality, Service & Pricing standards for our industry.</p>
         </div>
 
       </div>

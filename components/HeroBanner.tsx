@@ -42,8 +42,8 @@ function HeroBanner({
 
           <div className='flex items-center gap-3 justify-center'>
           <h1 className="text-white font-bold text-4xl font-krona">{lableText || " "}</h1>
-                        <span className=""><svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg"><rect y="0.000488281" width="9.88145" height="4.5111" fill="white"></rect></svg></span>
-                        <span className=""><svg width="83" height="5" viewBox="0 0 83 5" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.580078" width="82.3454" height="4.5111" fill="white"></rect></svg></span>
+                        {/* <span className=""><svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg"><rect y="0.000488281" width="9.88145" height="4.5111" fill="white"></rect></svg></span>
+                        <span className=""><svg width="83" height="5" viewBox="0 0 83 5" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.580078" width="82.3454" height="4.5111" fill="white"></rect></svg></span> */}
                     </div>
         </div>
       </div>

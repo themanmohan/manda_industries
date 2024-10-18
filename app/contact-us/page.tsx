@@ -78,7 +78,7 @@ const Contact = () => {
             </div>
 
             <div className="xl:flex sm:block gap-5 w-full mb-14">
-              <div className="relative w-full xl:mb-0 sm:mb-14">
+              <div className="relative w-full xl:mb-0 md:mb-14 sm:mb-14">
                 <input
                   className="peer border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 placeholder-transparent"
                   type="text"
@@ -93,7 +93,7 @@ const Contact = () => {
                 </label>
               </div>
 
-              <div className="relative w-full">
+              <div className="relative w-full xl:mb-0 md:mb-14 sm:mb-14">
                 <input
                   className="peer border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 placeholder-transparent"
                   type="text"
@@ -146,7 +146,7 @@ const Contact = () => {
             <div className="xl:flex sm:block gap-5 w-full mb-14">
               <div className="relative w-full xl:mb-0 sm:mb-14 xs:mb-14">
               <select
-                className="peer border-b-2 border-black focus:outline-none focus:border-blue-500 placeholder-transparent"
+                className="peer border-b-2 border-300 border-gray-300 focus:outline-none focus:border-blue-500 placeholder-transparent"
                 id="state"
               >
                 <option value=""></option>
