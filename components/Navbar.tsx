@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import Image from "next/image"
+
+import { useRouter, usePathname } from 'next/navigation';
 import {
   Dialog,
   DialogPanel,
@@ -40,6 +42,10 @@ import Link from "next/link"
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const router = useRouter();
+  const pathname = usePathname();
+
+  console.log("router",router)
 
   return (
     <header className="bg-white top-0 z-40000">
@@ -66,18 +72,20 @@ export default function Navbar() {
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
 
-        <Link href="/" className="text-sm font-semibold leading-6 text-gray-900 font-krona">
+        <Link href="/" className={`text-sm font-semibold leading-6 text-gray-900 font-krona ${pathname === '/' ? 'border-b-2 border-coral-red' : ''}`}>
               Home
           </Link>
-          <Link href="/about-us" className="text-sm font-semibold leading-6 text-gray-900 font-krona">
+          <Link href="/about-us" className={`text-sm font-semibold leading-6 text-gray-900 font-krona ${pathname === '/about-us' ? 'border-b-2 border-coral-red' : ''}`}>
             About Us
           </Link>
-          <Link href="/why-epe" className="text-sm font-semibold leading-6 text-gray-900 font-krona">
+          <Link href="/why-epe" className={`text-sm font-semibold leading-6 text-gray-900 font-krona ${pathname === '/why-epe' ? 'border-b-2 border-coral-red' : ''}`}>
             Why EPE
           </Link>
           <Popover className="relative">
             <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 font-krona">
-              Product
+            <Link href="/product" className={`text-sm font-semibold leading-6 text-gray-900 font-krona ${pathname === '/product' ? 'border-b-2 border-coral-red' : ''}`}>
+            Product
+          </Link>
               <ChevronDownIcon aria-hidden="true" className="h-5 w-5 flex-none text-gray-400" />
             </PopoverButton>
 
@@ -106,7 +114,7 @@ export default function Navbar() {
            
             </PopoverPanel>
           </Popover>
-          <Link href="/contact-us" className="text-sm font-semibold leading-6 text-gray-900 font-krona">
+          <Link href="/contact-us" className={`text-sm font-semibold leading-6 text-gray-900 font-krona ${pathname === '/contact-us' ? 'border-b-2 border-coral-red' : ''}`}>
             Contact Us
           </Link>
         </PopoverGroup>
