@@ -1,5 +1,5 @@
 "use client"
-import React from 'react';
+
 import { HeroBanner } from "@/components"
 // import QualityCard from '@/components/QualityCard';
 // import { services } from "@/constants";
@@ -8,7 +8,11 @@ import picture1 from "@/assets/images/whyepe/Picture1.png"
 import picture2 from "@/assets/images/whyepe/Picture2.png"
 import picture3 from "@/assets/images/whyepe/Picture3.png"
 import picture4 from "@/assets/images/whyepe/Picture4.png"
+import React from 'react';
+import Example from "@/components/charts/PieChart"
 function WhyEPE() {
+
+      
     return (
         <section className="">
             <HeroBanner lableText="WHY EPE" />
@@ -16,57 +20,52 @@ function WhyEPE() {
             <div className='whitespace max-container bg-white airbubble_section' >
                 <h1 className='text-4xl font-krona text-center mb-10'>Comparison of <span className='text-coral-red'>Polyethylene</span> and <span className='text-coral-red'>Polystyrene</span> Based on Key Factors</h1>
                 <div className='max-container flex justify-center flex-wrap gap-9'>
-                    {/* {services.map((service) => (
-                        <QualityCard key={service.label} {...service} />
-                    ))} */}
+             
                 </div>
+           
             </div>
 
             <article className='whitespace max-container bg-white '>
-                <Image src={picture1} alt='hdjsa' className='w-[100vw]' />
+                <div className='bg-coral-red flex w-full justify-evenly py-5 text-white rounded-md' >
+                    <h1 className='font-krona'>POLYTETHYLENE</h1>
+                    <span className='font-krona'>vs</span>
+                    <h1 className='font-krona'>POLYSTYRENE</h1>
+                </div>
 
+                <div className='flex mt-5 border rounded-md'>
+                    <div className='bg-gray-400 w-[5%] text-center p-3'></div>
 
-                {/* <div>
-                    <h1 className='text-4xl font-bold text-center'><span className='text-coral-red'>EPE</span> packaging material.</h1>
-
-                    <div className=''>
-                        <div className='flex items-center gap-3 justify-start'>
-                            <h1 className='text-2xl font-bold'>Recyclability</h1>
-                            <span className=""><svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg"><rect y="0.000488281" width="9.88145" height="4.5111" fill="black"></rect></svg></span>
-                            <span className=""><svg width="83" height="5" viewBox="0 0 83 5" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.580078" width="82.3454" height="4.5111" fill="black"></rect></svg></span>
-                        </div>
-                        <p>Polyethylene vs Polystyrene – Polyethylene (EPE) foam represents a significantly more sustainable packaging solution for a variety of simple reasons. Polyethylene foam is reusable and 100% curbside recyclable as a class 4 material. Additionally, our innovative packaging designs, utilizing polyethylene material, achieve an 80% reduction in material. Reduce-able. Reusable. Recyclable.</p>
-                        <p>EPS foam manages a paltry 12% rate of recycling and the overwhelming majority of recycling centers across the United States refuse to accept the class 6 material. What’s worse – polystyrene foam has a consumer recycling rate of only 6%, which means that Styrofoam that makes it to customers almost always ends up in a landfill.</p>
+                    <div className='bg-coral-red w-[95%] flex items-center p-4 font-krona text-white'>
+                        SUSTAINBILITY
                     </div>
                 </div>
 
-                <div>
-                    <h1 className='text-4xl font-bold text-center'><span className='text-coral-red'>EPE</span> packaging material.</h1>
+                <div className='flex gap-5 w-full px-10 mt-5'>
+                    <div className='w-1/2 bg-gray-300 rounded-sm p-5'>
+                        <h4 className='font-krona'>POLYTETHYLENE</h4>
 
-                    <div className=''>
-                        <div className='flex items-center gap-3 justify-start'>
-                            <h1 className='text-2xl font-bold'>Recyclability</h1>
-                            <span className=""><svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg"><rect y="0.000488281" width="9.88145" height="4.5111" fill="black"></rect></svg></span>
-                            <span className=""><svg width="83" height="5" viewBox="0 0 83 5" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.580078" width="82.3454" height="4.5111" fill="black"></rect></svg></span>
-                        </div>
-                        <p>Polyethylene vs Polystyrene – Polyethylene (EPE) foam represents a significantly more sustainable packaging solution for a variety of simple reasons. Polyethylene foam is reusable and 100% curbside recyclable as a class 4 material. Additionally, our innovative packaging designs, utilizing polyethylene material, achieve an 80% reduction in material. Reduce-able. Reusable. Recyclable.</p>
-                        <p>EPS foam manages a paltry 12% rate of recycling and the overwhelming majority of recycling centers across the United States refuse to accept the class 6 material. What’s worse – polystyrene foam has a consumer recycling rate of only 6%, which means that Styrofoam that makes it to customers almost always ends up in a landfill.</p>
+                        <ul className='list-disc text-md info-text'>
+                            <li>Capable of repeated reuse</li>
+                            <li>Non-toxic</li>
+                            <li>100% curbside recyclable as a class 4 material</li>
+                            <li>Rate of PE Recycling</li>
+                        </ul>
+                    </div>
+                    <div className='w-1/2 bg-gray-300 rounded-sm p-5'>
+                        <h4 className='font-krona'>POLYSTYRENE</h4>
+
+
+                        <ul>
+                            <li>Not suitable for reuse</li>
+                            <li>Made from styrene, toxic chemical and carcinogen</li>
+                            <li>Rejected by most recycling facilities as class 6 material</li>
+                            <li>Rate of PE Recycling</li>
+                        </ul>
                     </div>
                 </div>
 
-                <div>
-                    <h1 className='text-4xl font-bold text-center capitalize'><span className='text-coral-red'>EPE</span> packaging material.</h1>
+                {/* <Image src={picture1} alt='hdjsa' className='w-[100vw]' /> */}
 
-                    <div className=''>
-                        <div className='flex items-center gap-3 justify-start'>
-                            <h1 className='text-2xl font-bold'>Recyclability</h1>
-                            <span className=""><svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg"><rect y="0.000488281" width="9.88145" height="4.5111" fill="black"></rect></svg></span>
-                            <span className=""><svg width="83" height="5" viewBox="0 0 83 5" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.580078" width="82.3454" height="4.5111" fill="black"></rect></svg></span>
-                        </div>
-                        <p>Polyethylene vs Polystyrene – Polyethylene (EPE) foam represents a significantly more sustainable packaging solution for a variety of simple reasons. Polyethylene foam is reusable and 100% curbside recyclable as a class 4 material. Additionally, our innovative packaging designs, utilizing polyethylene material, achieve an 80% reduction in material. Reduce-able. Reusable. Recyclable.</p>
-                        <p>EPS foam manages a paltry 12% rate of recycling and the overwhelming majority of recycling centers across the United States refuse to accept the class 6 material. What’s worse – polystyrene foam has a consumer recycling rate of only 6%, which means that Styrofoam that makes it to customers almost always ends up in a landfill.</p>
-                    </div>
-                </div> */}
             </article>
 
             <div className='whitespace max-container airbubble_section'>
@@ -103,7 +102,56 @@ function WhyEPE() {
                 </section>
             </div>
 
-            <div className='max-container'>
+            <div className='max-container whitespace bg-white'>
+
+                <div className='flex mt-5 pt-10'>
+                    <div className='bg-gray-400 w-[4%] text-center p-3'></div>
+
+                    <div className='bg-coral-red w-[96%] flex items-center p-4 font-krona text-white'>
+                        COST EFFICIENCY
+                    </div>
+
+                </div>
+
+                <div className='flex w-full px-10'>
+                    <div className='w-1/2'>
+                        <h2 >Less  Material Means Efficient Shipping</h2>
+                        <p >Our <span>EP3</span> solution are significantly more cost effective to ship due to optimized <span>lower volumetric size</span> packaging and <span>lay-flat design</span></p>
+                    </div>
+
+                    <div className='w-1/2 flex'>
+                        <span>85%</span>
+                        <p>less material then the origin <span>EPS</span> packaging</p>
+                    </div>
+                </div>
+
+                <hr className='border-red-500 px-10' />
+
+
+                <div className='flex px-10'>
+                    <div className='w-1/2'>
+                        <h2><span><span>EPS</span> Packaging Designs </span> Versus Over Packaging with <span>EPS</span></h2>
+                        <span>Our <span>EP3</span> design featuring <span>polyethylene</span> material, achieves a 77% increase in both pallets storage and container quantity. All of these efficiencies corresponds to significant reduction in freight costs</span>
+                    </div>
+
+                    <div className='w-1/2'>
+                        <div>
+                            <div>
+                                <h1>3,360 units per pallet with <span>EP3</span></h1>
+                            </div>
+
+                            <div>
+                                <h1>1,899 units per pallets with EPS</h1>
+                            </div>
+                        </div>
+
+                        <div>
+                            <span>77%</span>
+                            <p>increase in pallet storage over previous <span>EPS</span> design</p>
+                        </div>
+                    </div>
+                </div>
+
                 <Image src={picture2} alt='hdjsa' className='w-[100vw]' />
             </div>
 
@@ -122,7 +170,38 @@ function WhyEPE() {
                 </div>
             </article>
 
-            <div className='max-container'>
+            <div className='max-container whitespace bg-white'>
+                <div className='flex mt-5 pt-10'>
+                    <div className='bg-gray-400 w-[4%] text-center p-3'></div>
+
+                    <div className='bg-coral-red w-[96%] flex items-center p-4 font-krona text-white'>
+                        CUSHIONING PERFORMANCE
+                    </div>
+
+                </div>
+
+                <div className='flex'>
+                    <div className='w-1/2'>
+                        <h1>POLYETHENE</h1>
+
+                        <ul>
+                            <li>Expanded polyethylene foam is a <span>multi-impact</span>material</li>
+                            <li>Polyethylene is capable of protecting against rogors of e-commerce transit</li>
+                            <li><span>EPE has high ductility, impact strength and creep properties, making it an ideal cushioning resources</span></li>
+                        </ul>
+                    </div>
+
+                    <div className='w-1/2'>
+                        <h1>POLYSTYRENE</h1>
+
+
+                        <ul>
+                            <li>Expanded polystyrene is a <span>single-impact</span>material</li>
+                            <li><span>EPS</span> can lose its cushioning properties after one bump in road</li>
+                            <li>Current packaging methods account for $6 billion worth of product breakage annually</li>
+                        </ul>
+                    </div>
+                </div>
                 <Image src={picture3} alt='hdjsa' className='w-[100vw]' />
             </div>
 
@@ -143,7 +222,26 @@ function WhyEPE() {
 
             </article>
 
-            <div className='max-container'>
+            <div className='max-container whitespace bg-white'>
+            <div className='flex mt-5 pt-10'>
+                    <div className='bg-gray-400 w-[4%] text-center p-3'></div>
+
+                    <div className='bg-coral-red w-[96%] flex items-center p-4 font-krona text-white'>
+                        SHIPPING DAMAGE
+                    </div>
+
+                </div>
+
+                <p>By <span>replacing polystyrene,</span> we have helped businesses <span>reduce</span> e-commerce damage rate from <span>20%</span> to <span>1%</span></p>
+
+                <div className="flex w-full">
+                    <div className="w-1/2 flex justify-center items-center">
+                    <Example />
+                    </div>
+                    <div className="w-1/2 flex justify-center items-center">
+                    <Example />
+                    </div>
+                </div>
                 <Image src={picture4} alt='hdjsa' className='w-[100vw]' />
             </div>
 
@@ -233,7 +331,7 @@ function WhyEPE() {
                     </div>
 
                     <div className='mb-5'>
-                    <h2 className='text-2xl font-krona mb-3'>7. Case Studies and Examples:-</h2>
+                        <h2 className='text-2xl font-krona mb-3'>7. Case Studies and Examples:-</h2>
                         <p className='mb-1 pl-3'> <span className='text-md font-krona'> - Electronics Industry:-</span> <span className='info-text'>In the case of electronics, where items like **smartphones, TVs, and computers* are sensitive to impact and moisture, bad packaging leads to high returns and replacements, costing manufacturers millions annually.</span></p>
                         <p className='mb-1 pl-3'> <span className='text-md font-krona'> - Furniture and Appliances:-</span> <span className='info-text'>Large consumer durables like furniture and home appliances often face damage during transit due to **insufficient cushioning* or improper loading and unloading procedures, causing high financial losses.</span></p>
                     </div>
