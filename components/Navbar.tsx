@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from "next/image"
 
-import { useRouter, usePathname } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import {
   Dialog,
   DialogPanel,
@@ -42,10 +42,7 @@ import Link from "next/link"
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const router = useRouter();
   const pathname = usePathname();
-
-  console.log("router",router)
 
   return (
     <header className="bg-white top-0 z-40000">

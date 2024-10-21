@@ -223,7 +223,7 @@ function WhyEPE() {
             </article>
 
             <div className='max-container whitespace bg-white'>
-            <div className='flex mt-5 pt-10'>
+            <div className='flex mt-5 pt-10 w-[90%]'>
                     <div className='bg-gray-400 w-[4%] text-center p-3'></div>
 
                     <div className='bg-coral-red w-[96%] flex items-center p-4 font-krona text-white'>

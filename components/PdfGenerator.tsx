@@ -1,3 +1,4 @@
+
 "use client"
 import { NextPage } from 'next';
 import { PDFDocument, rgb } from 'pdf-lib';
@@ -17,7 +18,7 @@ const products: Product[] = Array.from({ length: 10 }, (_, i) => ({
   image: `https://picsum.photos/seed/${i + 1}/200/300`, // Random image from picsum.photos
 }));
 
-const Blog: NextPage = () => {
+const PdfGenerator: NextPage = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   // Helper function to fetch the image data as a Uint8Array
@@ -129,21 +130,23 @@ const Blog: NextPage = () => {
   };
 
   return (
-    <div style={{ padding: '20px' }}>
-      <h1>Product List</h1>
-      <ul>
-        {products.map((product) => (
-          <li key={product.id} style={{ marginBottom: '20px' }}>
-            <img src={product.image} alt={product.name} width={100} height={150} />
-            <p>{product.name}</p>
-          </li>
-        ))}
-      </ul>
-      <button onClick={generatePDF} disabled={isLoading}>
-        {isLoading ? 'Generating PDF...' : 'Download Product List as PDF'}
-      </button>
-    </div>
+
+<button
+onClick={generatePDF} disabled={isLoading}
+className={`flex justify-center items-center gap-2 px-5 py-3 border font-krona text-sm leading-none bg-coral-red text-white border-coral-red w-full`}
+>
+{isLoading ? 'Generating PDF...' : 'Download Product List as PDF'}
+
+{/* {iconURL && (
+  <Image
+    src={iconURL}
+    alt='arrow right icon'
+  />
+)} */}
+
+</button>
   );
 };
 
-export default Blog;
+export default PdfGenerator;
+

@@ -6,7 +6,7 @@ import CustomerReviews from "@/sections/CustomerReviews";
 import Link from "next/link"
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-
+import PdfGenerator from "@/components/PdfGenerator";
 import { AIRBUBBLE1, AIRBUBBLE2, EPE1, EPE2 } from "@/assets/images"
 
 
@@ -150,6 +150,7 @@ export default function Home() {
             <h1 className="text-2xl font-krona pb-5">EPE FORM</h1>
             <p className="pb-5 info-text">Air bubble film better known as bubble wrap is a Low Density Polyethylene Film (LDPE) based film commonly used for packaging and protecting delicate products. This multilayer film encloses air within a bubble shaped hemispherical outer layer of film providing cushioning effect to fragile products. The added advantages of Air Bubble Film is that it isolates vibration and shock, thus reducing damages during transit to the minimal</p>
             <Button label="Explore More" />
+            <PdfGenerator />
           </div>
 
           <div className="xl:w-1/3 md:w-1/2 sm:order-first  flex flex-col justify-center">
