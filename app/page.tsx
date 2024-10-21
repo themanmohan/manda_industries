@@ -1,7 +1,8 @@
 "use client"
+ 
 import Image from "next/image";
 // import { shoes } from "../constants";
-import { Button, } from "../components";
+import { Button,Stats, ShoeCard } from "../components";
 import CustomerReviews from "@/sections/CustomerReviews";
 import Link from "next/link"
 import Carousel from 'react-multi-carousel';
@@ -9,13 +10,16 @@ import 'react-multi-carousel/lib/styles.css';
 import PdfGenerator from "@/components/PdfGenerator";
 import { AIRBUBBLE1, AIRBUBBLE2, EPE1, EPE2 } from "@/assets/images"
 
+import { useState } from "react";
+import { shoes } from "../constants";
+
+
 
 export default function Home() {
+  const [bigShoeImg, setBigShoeImg] = useState(EPE1);
 
-  // const bigShoeImg = EPE1.src;
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 1
     },
@@ -46,7 +50,7 @@ export default function Home() {
 
   return (
     <>
-      {/* <section className="w-full flex xl:flex-row flex-col justify-center min-h-screen gap-10 max-container xl:padding-l wide:padding-r padding-b bg-white">
+      <section className="w-full flex xl:flex-row flex-col justify-center min-h-screen gap-10 max-container xl:padding-l wide:padding-r padding-b bg-white">
         <div className="z-10 relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-10">
           <p className="text-xl font-krona text-coral-red">
             Our Product
@@ -99,7 +103,7 @@ export default function Home() {
           </div>
         </div>
 
-      </section> */}
+      </section>
 
       <section className="my-20 max-container whitespace">
         <h1 className="text-4xl font-krona text-center mb-10">OUR <span className="text-coral-red">PRODUCT</span></h1>
@@ -153,7 +157,7 @@ export default function Home() {
             <PdfGenerator />
           </div>
 
-          <div className="xl:w-1/3 md:w-1/2 sm:order-first  flex flex-col justify-center">
+          <div className="xl:w-1/3 md:w-1/2  flex flex-col justify-center">
 
             <Carousel
 

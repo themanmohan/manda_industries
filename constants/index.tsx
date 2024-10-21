@@ -1,5 +1,5 @@
 import { facebook, instagram, twitter } from "../assets/icons";
-import { customer1, customer2, EPE1, AIRBUBBLE2,AIRBUBBLE1, sustainability,costEffiency, performance } from "../assets/images";
+import { customer1, customer2, EPE1, AIRBUBBLE2,AIRBUBBLE1 } from "../assets/images";
 
 export const navLinks = [
     { href: "/", label: "Home" },
@@ -50,24 +50,6 @@ export const products = [
         name: "Nike Air Jordan-001",
         price: "$230.20",
     },
-];
-
-export const services = [
-    {
-        imgURL: sustainability,
-        label: "Finance Contact",
-        subtext: "Enjoy seamless shopping with our complimentary shipping service."
-    },
-    {
-        imgURL: costEffiency,
-        label: "Customer Contact",
-        subtext: "Experience worry-free transactions with our secure payment options."
-    },
-    {
-        imgURL: performance,
-        label: "Management Contact",
-        subtext: "Our dedicated team is here to assist you every step of the way."
-    }
 ];
 
 export const reviews = [
@@ -133,4 +115,41 @@ export const socialMedia = [
     { src: facebook, alt: "facebook logo" },
     { src: twitter, alt: "twitter logo" },
     { src: instagram, alt: "instagram logo" },
+];
+
+
+// contact page data
+
+export const officeLocations = [
+    {
+        title:"Corporate",
+        emailAddress:"test@gmail.com",
+        mobilenumber:"+919218100126",
+        address:"Morpen road mulkumanjra baddi 130401"
+    },
+    {
+        title:"Residence",
+        emailAddress:"test@gmail.com",
+        mobilenumber:"+919218100126",
+        address:"Morpen road mulkumanjra baddi 130401"
+    }
+]
+
+export const managementContacts = [
+    {
+        title:"Management",
+        email: "test@gmail.com",
+        phoneNumber: "+919218100126"
+    },
+     {
+        title:"Finanace",
+        email: "test@gmail.com",
+        phoneNumber: "+919218100126"
+    }, 
+    {
+        title:"Help Desk",
+        email: "test@gmail.com",
+        phoneNumber: "+919218100126"
+    },
+
 ];

@@ -1,64 +1,38 @@
 import React from "react";
 import { Button } from "@/components"
 import { HeroBanner } from "@/components";
-import { services } from "@/constants";
-import ContactCard from "@/components/ContactCard";
+import { managementContacts, officeLocations } from "@/constants";
+import ManagmentContactCard from "@/components/contact-page/ManagmentContactCard";
+import ContactDetailCard from "@/components/contact-page/ContactDetailCard";
+
 const Contact = () => {
+
   return (
-    <>
       <section className="mb-20" >
-
+    
         <HeroBanner lableText="Contact Us" />
-      
-        <div className="max-container padding-x  padding-l padding-r xl:flex md:block w-full mt-20 gap-10">
+        <h2 className="text-center text-3xl font-krona mt-12 mb-10 font-semibold">Contact Details</h2>
 
+        <div className="max-container padding-x  padding-l padding-r xl:flex md:block w-full gap-10">
+     
           <div className="xl:w-1/2 md:w-full flex flex-col justify-center">
 
-            <div>
-
-              <h1 className="text-4xl font-bold font-krona"><span className="text-coral-red">Registered</span> Office</h1>
-              <div className="flex gap-2 items-center mt-5">
-                <span className="p-2 bg-coral-red block w-fit rounded-full">             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3" /><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z" /></svg></span>
-                <p className="font-sans text-lg">612, Raheja Chambers, Nariman Point, Mumbai - 400021</p>
-              </div>
-
-              <div className="flex gap-2 items-center mt-4">
-                <span className="p-2 bg-coral-red block w-fit rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
-                <p className="font-sans text-lg">+919218100126</p>
-              </div>
-
-              <div className="flex gap-2 items-center mt-4">
-                <span className="p-2 bg-coral-red block w-fit rounded-full">  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></span>
-                <p className="font-sans text-lg" >joe@gmail.com</p>
-              </div>
-
-            </div>
-
-            <div className="mt-10">
-
-              <h1 className="text-3xl font-bold font-krona"><span className="text-coral-red">Corporate </span> Office</h1>
-              <div className="flex gap-2 items-center mt-5">
-                <span className="p-2 bg-coral-red block w-fit rounded-full">             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3" /><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z" /></svg></span>
-                <p className="font-sans text-lg">
-                  1161, Solitaire Corporate Park, Andheri- Ghatkopar Link Road, Chakala, Andheri (East), Mumbai - 400093</p>
-              </div>
-
-              <div className="flex gap-2 items-center mt-4">
-                <span className="p-2 bg-coral-red block w-fit rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
-                <p className="font-sans text-lg">+919218100126</p>
-              </div>
-
-              <div className="flex gap-2 items-center mt-4">
-                <span className="p-2 bg-coral-red block w-fit rounded-full">  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></span>
-                <p className="font-sans text-lg">joe@gmail.com</p>
-              </div>
-
-            </div>
+            {
+              officeLocations.map((officeLocation,i)=>{
+                return <ContactDetailCard
+                key={i}
+                title={officeLocation.title}
+                address={officeLocation.address}
+                mobileNumber={officeLocation.mobilenumber}
+                emailAddress={officeLocation.emailAddress}
+              />
+              })
+            }
 
 
           </div>
 
-          <div className="xl:w-1/2 md:w-full md:mt-10 bg-lightBlue p-10 rounded-md">
+          <div className="xl:w-1/2 md:w-full xl:mt-0 mt-10 bg-lightBlue p-10 rounded-md">
 
             <div className="relative mt-4 mb-14">
               <select
@@ -78,7 +52,7 @@ const Contact = () => {
             </div>
 
             <div className="xl:flex sm:block gap-5 w-full mb-14">
-              <div className="relative w-full xl:mb-0 md:mb-14 sm:mb-14">
+              <div className="relative w-full mb-14 xl:mb-0">
                 <input
                   className="peer border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 placeholder-transparent"
                   type="text"
@@ -93,7 +67,7 @@ const Contact = () => {
                 </label>
               </div>
 
-              <div className="relative w-full xl:mb-0 md:mb-14 sm:mb-14">
+              <div className="relative w-full xl:mb-0 ">
                 <input
                   className="peer border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 placeholder-transparent"
                   type="text"
@@ -111,7 +85,7 @@ const Contact = () => {
             </div>
 
             <div className="xl:flex sm:block gap-5 w-full mb-14">
-              <div className="relative w-full xl:mb-0 sm:mb-14">
+              <div className="relative w-full mb-14 xl:mb-0">
                 <input
                   className="peer border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 placeholder-transparent"
                   type="text"
@@ -144,7 +118,7 @@ const Contact = () => {
             </div>
 
             <div className="xl:flex sm:block gap-5 w-full mb-14">
-              <div className="relative w-full xl:mb-0 sm:mb-14 xs:mb-14">
+              <div className="relative w-full mb-14 xl:mb-0">
               <select
                 className="peer border-b-2 border-300 border-gray-300 focus:outline-none focus:border-blue-500 placeholder-transparent"
                 id="state"
@@ -202,13 +176,13 @@ const Contact = () => {
 
        
         <section className='mt-10 max-container whitespace flex justify-center flex-wrap gap-9'>
-          {services.map((service) => (
-            <ContactCard key={service.label} {...service} />
+          {managementContacts.map((managementContact, i) => (
+            <ManagmentContactCard key={i} {...managementContact} />
           ))}
          </section>
      
       </section >
-    </>
+ 
   );
 };
 
