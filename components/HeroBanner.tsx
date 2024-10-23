@@ -40,7 +40,7 @@ function HeroBanner({
 
         <div style={{...backgroundImageStyle3, position: 'absolute'}}>
 
-          <div className='flex items-center gap-3 justify-center'>
+          <div className='flex items-center gap-3 justify-center text-center'>
           <h1 className="text-white font-bold text-4xl font-krona">{lableText || " "}</h1>
 
                     </div>

@@ -4,12 +4,12 @@ import { HeroBanner } from "@/components"
 // import QualityCard from '@/components/QualityCard';
 // import { services } from "@/constants";
 import Image from "next/image"
-import picture1 from "@/assets/images/whyepe/Picture1.png"
 import picture2 from "@/assets/images/whyepe/Picture2.png"
 import picture3 from "@/assets/images/whyepe/Picture3.png"
 import picture4 from "@/assets/images/whyepe/Picture4.png"
 import React from 'react';
 import Example from "@/components/charts/PieChart"
+import Accordion1 from "@/components/shared/Accordian1"
 function WhyEPE() {
 
       
@@ -17,7 +17,9 @@ function WhyEPE() {
         <section className="">
             <HeroBanner lableText="WHY EPE" />
 
-            <div className='whitespace max-container bg-white airbubble_section' >
+            <article className='whitespace max-container bg-white pb-14'>
+
+            <div className='bg-white airbubble_section' >
                 <h1 className='text-4xl font-krona text-center mb-10'>Comparison of <span className='text-coral-red'>Polyethylene</span> and <span className='text-coral-red'>Polystyrene</span> Based on Key Factors</h1>
                 <div className='max-container flex justify-center flex-wrap gap-9'>
              
@@ -25,11 +27,10 @@ function WhyEPE() {
            
             </div>
 
-            <article className='whitespace max-container bg-white '>
-                <div className='bg-coral-red flex w-full justify-evenly py-5 text-white rounded-md' >
-                    <h1 className='font-krona'>POLYTETHYLENE</h1>
-                    <span className='font-krona'>vs</span>
-                    <h1 className='font-krona'>POLYSTYRENE</h1>
+                <div className='bg-coral-red flex flex-col md:flex-row w-full justify-evenly py-5 text-white rounded-md' >
+                    <h1 className='font-krona text-center md:text-left'>POLYTETHYLENE</h1>
+                    <span className='font-krona text-center'>vs</span>
+                    <h1 className='font-krona text-center md:text-left'>POLYSTYRENE</h1>
                 </div>
 
                 <div className='flex mt-5 border rounded-md'>
@@ -40,31 +41,28 @@ function WhyEPE() {
                     </div>
                 </div>
 
-                <div className='flex gap-5 w-full px-10 mt-5'>
-                    <div className='w-1/2 bg-gray-300 rounded-sm p-5'>
+                <div className='flex flex-col md:flex-row gap-5 w-full px-0 md:px-10 mt-10'>
+                    <div className='w-full md:w-1/2 bg-gray-100 rounded-sm p-10'>
                         <h4 className='font-krona'>POLYTETHYLENE</h4>
 
-                        <ul className='list-disc text-md info-text'>
-                            <li>Capable of repeated reuse</li>
-                            <li>Non-toxic</li>
-                            <li>100% curbside recyclable as a class 4 material</li>
-                            <li>Rate of PE Recycling</li>
+                        <ul className='list-disc text-md info-text pl-5 pt-3'>
+                            <li className="pb-3">Capable of repeated reuse</li>
+                            <li className="pb-3">Non-toxic</li>
+                            <li className="pb-3">100% curbside recyclable as a class 4 material</li>
+                            <li className="pb-3">Rate of PE Recycling</li>
                         </ul>
                     </div>
-                    <div className='w-1/2 bg-gray-300 rounded-sm p-5'>
+                    <div className='w-full md:w-1/2 bg-gray-100 rounded-sm p-10'>
                         <h4 className='font-krona'>POLYSTYRENE</h4>
 
-
-                        <ul>
-                            <li>Not suitable for reuse</li>
-                            <li>Made from styrene, toxic chemical and carcinogen</li>
-                            <li>Rejected by most recycling facilities as class 6 material</li>
+                        <ul className='list-disc text-md info-text pl-5 pt-3'>
+                            <li className="pb-3">Not suitable for reuse</li>
+                            <li className="pb-3">Made from styrene, toxic chemical and carcinogen</li>
+                            <li className="pb-3">Rejected by most recycling facilities as class 6 material</li>
                             <li>Rate of PE Recycling</li>
                         </ul>
                     </div>
                 </div>
-
-                {/* <Image src={picture1} alt='hdjsa' className='w-[100vw]' /> */}
 
             </article>
 
@@ -75,16 +73,6 @@ function WhyEPE() {
                     <span className=""><svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg"><rect y="0.000488281" width="9.88145" height="4.5111" fill="black"></rect></svg></span>
                     <span className=""><svg width="83" height="5" viewBox="0 0 83 5" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.580078" width="82.3454" height="4.5111" fill="black"></rect></svg></span>
                 </div>
-
-                {/* <div className=''>
-                        <div className='flex items-center gap-3 justify-start'>
-                            <h1 className='text-2xl font-bold'>Recyclability</h1>
-                            <span className=""><svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg"><rect y="0.000488281" width="9.88145" height="4.5111" fill="black"></rect></svg></span>
-                            <span className=""><svg width="83" height="5" viewBox="0 0 83 5" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.580078" width="82.3454" height="4.5111" fill="black"></rect></svg></span>
-                        </div>
-                        <p>Polyethylene vs Polystyrene – Polyethylene (EPE) foam represents a significantly more sustainable packaging solution for a variety of simple reasons. Polyethylene foam is reusable and 100% curbside recyclable as a class 4 material. Additionally, our innovative packaging designs, utilizing polyethylene material, achieve an 80% reduction in material. Reduce-able. Reusable. Recyclable.</p>
-                        <p>EPS foam manages a paltry 12% rate of recycling and the overwhelming majority of recycling centers across the United States refuse to accept the class 6 material. What’s worse – polystyrene foam has a consumer recycling rate of only 6%, which means that Styrofoam that makes it to customers almost always ends up in a landfill.</p>
-                    </div> */}
 
                 <section className='rounded-md py-5  mt-5 gap-10'>
                     <div className='w-full xl:border-r md:border-none mb-10'>
@@ -102,7 +90,7 @@ function WhyEPE() {
                 </section>
             </div>
 
-            <div className='max-container whitespace bg-white'>
+            {/* <div className='max-container whitespace bg-white'>
 
                 <div className='flex mt-5 pt-10'>
                     <div className='bg-gray-400 w-[4%] text-center p-3'></div>
@@ -113,39 +101,39 @@ function WhyEPE() {
 
                 </div>
 
-                <div className='flex w-full px-10'>
+                <div className='flex gap-16 w-full px-10 py-10'>
                     <div className='w-1/2'>
-                        <h2 >Less  Material Means Efficient Shipping</h2>
-                        <p >Our <span>EP3</span> solution are significantly more cost effective to ship due to optimized <span>lower volumetric size</span> packaging and <span>lay-flat design</span></p>
+                        <h2 className="font-krona text-2xl pb-5" >Less  Material Means Efficient Shipping</h2>
+                        <p className="info-text">Our <span>EP3</span> solution are significantly more cost effective to ship due to optimized <span>lower volumetric size</span> packaging and <span>lay-flat design</span></p>
                     </div>
 
-                    <div className='w-1/2 flex'>
-                        <span>85%</span>
-                        <p>less material then the origin <span>EPS</span> packaging</p>
+                    <div className='w-1/2 flex gap-3'>
+                        <span className="font-krona text-3xl flex justify-center items-center height-fit-content">85%</span>
+                        <p className="font-krona text-2xl">less material then the origin <span>EPS</span> packaging</p>
                     </div>
                 </div>
 
-                <hr className='border-red-500 px-10' />
+                <hr className='border-gray-300 mx-10' />
 
 
-                <div className='flex px-10'>
+                <div className='flex px-10 py-10 gap-16'>
                     <div className='w-1/2'>
-                        <h2><span><span>EPS</span> Packaging Designs </span> Versus Over Packaging with <span>EPS</span></h2>
-                        <span>Our <span>EP3</span> design featuring <span>polyethylene</span> material, achieves a 77% increase in both pallets storage and container quantity. All of these efficiencies corresponds to significant reduction in freight costs</span>
+                        <h2 className="font-krona text-2xl mb-5"><span><span>EPS</span> Packaging Designs </span> Versus Over Packaging with <span>EPS</span></h2>
+                        <span className="info-text">Our <span>EP3</span> design featuring <span>polyethylene</span> material, achieves a 77% increase in both pallets storage and container quantity. All of these efficiencies corresponds to significant reduction in freight costs</span>
                     </div>
 
                     <div className='w-1/2'>
-                        <div>
-                            <div>
-                                <h1>3,360 units per pallet with <span>EP3</span></h1>
+                        <div className="flex flex-col gap-10 border-l-4 border-dotted">
+
+                            <div className="bg-blue-600 py-6 font-krona text-xl">3,360 units per pallet with <span>EP3</span></div>
+
+                            <div className=" bg-blue-600" style={{ width: '15%' }}>
+                            <div className="py-6 w-full font-krona text-xl bg-gray-50" style={{backgroundColor: 'transparent' }}> 1,899 units per pallets with EPS</div>
                             </div>
 
-                            <div>
-                                <h1>1,899 units per pallets with EPS</h1>
-                            </div>
                         </div>
 
-                        <div>
+                        <div className="flex mt-5">
                             <span>77%</span>
                             <p>increase in pallet storage over previous <span>EPS</span> design</p>
                         </div>
@@ -153,7 +141,9 @@ function WhyEPE() {
                 </div>
 
                 <Image src={picture2} alt='hdjsa' className='w-[100vw]' />
-            </div>
+            </div> */}
+
+         
 
             <article className='whitespace max-container airbubble_section'>
 
@@ -169,8 +159,8 @@ function WhyEPE() {
                     <p className='mb-3 info-text'>To put it simply, polyethylene is a better material choice when it comes to designing packaging solutions. With our proprietary designs utilizing PE foam, we are able to reduce material and improve freight cost savings.</p>
                 </div>
             </article>
-
-            <div className='max-container whitespace bg-white'>
+ 
+            <div className='max-container whitespace bg-white pb-14'>
                 <div className='flex mt-5 pt-10'>
                     <div className='bg-gray-400 w-[4%] text-center p-3'></div>
 
@@ -180,33 +170,33 @@ function WhyEPE() {
 
                 </div>
 
-                <div className='flex'>
-                    <div className='w-1/2'>
-                        <h1>POLYETHENE</h1>
+                <div className='flex flex-col md:flex-row gap-5 w-full px-0 md:px-10 mt-10'>
+                    <div className='w-full md:w-1/2 bg-gray-100 rounded-sm p-10'>
+                        <h1 className="font-krona text-center">POLYETHENE</h1>
 
-                        <ul>
-                            <li>Expanded polyethylene foam is a <span>multi-impact</span>material</li>
-                            <li>Polyethylene is capable of protecting against rogors of e-commerce transit</li>
-                            <li><span>EPE has high ductility, impact strength and creep properties, making it an ideal cushioning resources</span></li>
+                        <ul className="list-disc text-md info-text pl-5 pt-3">
+                            <li className="pb-3">Expanded polyethylene foam is a <span>multi-impact</span>material</li>
+                            <li className="pb-3">Polyethylene is capable of protecting against rogors of e-commerce transit</li>
+                            <li className="pb-3"><span>EPE has high ductility, impact strength and creep properties, making it an ideal cushioning resources</span></li>
                         </ul>
                     </div>
 
-                    <div className='w-1/2'>
-                        <h1>POLYSTYRENE</h1>
+                    <div className='w-full md:w-1/2 bg-gray-100 rounded-sm p-10'>
+                        <h1 className="font-krona text-center">POLYSTYRENE</h1>
 
 
-                        <ul>
-                            <li>Expanded polystyrene is a <span>single-impact</span>material</li>
-                            <li><span>EPS</span> can lose its cushioning properties after one bump in road</li>
-                            <li>Current packaging methods account for $6 billion worth of product breakage annually</li>
+                        <ul className="list-disc text-md info-text pl-5 pt-3">
+                            <li className="pb-3">Expanded polystyrene is a <span>single-impact</span>material</li>
+                            <li className="pb-3"><span>EPS</span> can lose its cushioning properties after one bump in road</li>
+                            <li className="pb-3">Current packaging methods account for $6 billion worth of product breakage annually</li>
                         </ul>
                     </div>
                 </div>
-                <Image src={picture3} alt='hdjsa' className='w-[100vw]' />
+                {/* <Image src={picture3} alt='hdjsa' className='w-[100vw]' /> */}
             </div>
 
 
-            <article className='whitespace max-container airbubble_section'>
+            <article className='whitespace max-container py-14'>
 
                 <div>
                     <div className='flex items-center gap-3'>
@@ -221,9 +211,9 @@ function WhyEPE() {
                 </div>
 
             </article>
-
+  
             <div className='max-container whitespace bg-white'>
-            <div className='flex mt-5 pt-10 w-[90%]'>
+            <div className='flex mt-5 pt-10 text-center'>
                     <div className='bg-gray-400 w-[4%] text-center p-3'></div>
 
                     <div className='bg-coral-red w-[96%] flex items-center p-4 font-krona text-white'>
@@ -232,21 +222,27 @@ function WhyEPE() {
 
                 </div>
 
-                <p>By <span>replacing polystyrene,</span> we have helped businesses <span>reduce</span> e-commerce damage rate from <span>20%</span> to <span>1%</span></p>
 
-                <div className="flex w-full">
-                    <div className="w-1/2 flex justify-center items-center">
-                    <Example />
+                <div className="text-center flex justify-center my-8 ">
+                    <p className="w-[60%] text-center text-3xl">By <span>replacing polystyrene,</span> we have helped businesses <span>reduce</span> e-commerce damage rate from <span>20%</span> to <span>1%</span></p>
+                </div>
+
+                <div className="flex flex-col md:flex-row gap-5 w-full px-0 md:px-20">
+                    <div className="w-full md:w-1/2 flex justify-center items-center bg-gray-100 rounded-md">
+                        <Example />
                     </div>
-                    <div className="w-1/2 flex justify-center items-center">
-                    <Example />
+                    <div className="w-full md:w-1/2 flex justify-center items-center bg-gray-100 rounded-md">
+                        <Example />
                     </div>
                 </div>
-                <Image src={picture4} alt='hdjsa' className='w-[100vw]' />
+
+                <h1 className="text-center mt-7 font-krona text-3xl">E-Commerce Shipping Damage Rates</h1>
+                {/* <Image src={picture4} alt='hdjsa' className='w-[100vw]' /> */}
             </div>
 
             <article className='whitespace max-container airbubble_section'>
 
+             
 
                 <div>
                     <div className='flex items-center gap-3'>
@@ -260,7 +256,8 @@ function WhyEPE() {
                     <p className='mb-3 info-text'>When comparing protective capabilities, polyethylene’s natural properties elevate it above polystyrene material. In contrast to polyethylene, EPS foam is a single-impact material, rendered useless after one big bump in the road. As a result of traditional packaging with polystyrene material, shipping damage represents a significant cost for e-commerce businesses.</p>
                     <p className='mb-3 info-text'>The *consumer durable industry in India* has faced significant losses due to *bad packaging practices*, impacting both manufacturers and consumers. Here’s an overview of how these losses manifest:</p>
 
-                    <div className='mb-5'>
+                    <Accordion1 />
+                    {/* <div className='mb-5'>
                         <h2 className='text-2xl font-krona mb-3'>1. Financial Losses:-</h2>
                         <p className='mb-1 pl-3'> <span className='text-md font-krona'> Product Damage:-</span> <span className='info-text'>Poor packaging, especially for fragile or large durable goods like electronics, appliances, and furniture, can lead to damage during transit or storage. This results in:</span></p>
                         <ul className='info-text mb-2 pl-3'>
@@ -273,21 +270,21 @@ function WhyEPE() {
                             <li>- Bulkier or less optimized packaging requiring more space.</li>
                             <li>- Products requiring repacking or special handling.</li>
                         </ul>
-                    </div>
+                    </div>*/}
 
 
-                    <div className='mb-5'>
+                    {/* <div className='mb-5'>
                         <h2 className='text-2xl font-krona mb-3'>2. Reputation Damage:-</h2>
                         <p className='mb-1 pl-3'> <span className='text-md font-krona'> Customer Dissatisfaction:-</span> <span className='info-text'>Broken, damaged, or poorly packaged goods lead to negative customer experiences, damaging **brand loyalty* and resulting in poor reviews. This could also lead to:</span></p>
-                        <ul className='info-text mb-2 pl-3'>
-                            <li>- Loss of potential future sales.</li>
-                            <li>- Higher customer service and complaint resolution costs.</li>
-                        </ul>
-                        <p className='mb-1 pl-3'> <span className='text-md font-krona'> Retailer Relationships:-</span> <span className='info-text'>Retailers receiving damaged products face **inventory issues, leading to strained relationships with manufacturers, potential **cancellations of future orders, and **lost shelf space* in major retail outlets.</span></p>
-                    </div>
+                   <ul className='info-text mb-2 pl-3'>
+                        <li>- Loss of potential future sales.</li>
+                           <li>- Higher customer service and complaint resolution costs.</li>
+                     </ul>
+                       <p className='mb-1 pl-3'> <span className='text-md font-krona'> Retailer Relationships:-</span> <span className='info-text'>Retailers receiving damaged products face **inventory issues, leading to strained relationships with manufacturers, potential **cancellations of future orders, and **lost shelf space* in major retail outlets.</span></p>
+                    </div>  */}
 
 
-                    <div className='mb-5'>
+                    {/* <div className='mb-5'>
                         <h2 className='text-2xl font-krona mb-3'>3. Increased Returns and Warranty Claims:-</h2>
 
                         <ul className='info-text mb-2 pl-3'>
@@ -296,9 +293,9 @@ function WhyEPE() {
                             <li>- Lead to an increase in handling of returns and replacements, which can disrupt supply chain management.</li>
                         </ul>
 
-                    </div>
+                    </div> */}
 
-                    <div className='mb-5'>
+                    {/* <div className='mb-5'>
                         <h2 className='text-2xl font-krona mb-3'>4. Higher Environmental Costs:-</h2>
 
                         <ul className='info-text mb-2 pl-3'>
@@ -306,9 +303,9 @@ function WhyEPE() {
                             <li>- The use of *low-quality materials* in packaging not only leads to damaged products but also results in packaging waste, contributing to *environmental fines* and loss of market appeal for eco-conscious buyers.</li>
                         </ul>
 
-                    </div>
+                    </div> */}
 
-                    <div className='mb-5'>
+                    {/* <div className='mb-5'>
                         <h2 className='text-2xl font-krona mb-3'>5. Supply Chain Disruptions:-</h2>
 
                         <ul className='info-text mb-2 pl-3'>
@@ -317,9 +314,9 @@ function WhyEPE() {
                             <li>- Impacts production schedules if materials or components are damaged during shipment.</li>
                         </ul>
 
-                    </div>
+                    </div> */}
 
-                    <div className='mb-5'>
+                    {/* <div className='mb-5'>
                         <h2 className='text-2xl font-krona mb-3'>6. Legal & Regulatory Penalties:-</h2>
 
                         <ul className='info-text mb-2 pl-3'>
@@ -328,24 +325,24 @@ function WhyEPE() {
                             <li>- Legal challenges, especially if packaging failures cause injury or pose a hazard to consumers.</li>
                         </ul>
 
-                    </div>
+                    </div> */}
 
-                    <div className='mb-5'>
+                    {/* <div className='mb-5'>
                         <h2 className='text-2xl font-krona mb-3'>7. Case Studies and Examples:-</h2>
                         <p className='mb-1 pl-3'> <span className='text-md font-krona'> - Electronics Industry:-</span> <span className='info-text'>In the case of electronics, where items like **smartphones, TVs, and computers* are sensitive to impact and moisture, bad packaging leads to high returns and replacements, costing manufacturers millions annually.</span></p>
                         <p className='mb-1 pl-3'> <span className='text-md font-krona'> - Furniture and Appliances:-</span> <span className='info-text'>Large consumer durables like furniture and home appliances often face damage during transit due to **insufficient cushioning* or improper loading and unloading procedures, causing high financial losses.</span></p>
                     </div>
+ */}
 
 
-
-                    <div className='mb-5'>
+                    {/* <div className='mb-5'>
                         <h2 className='text-2xl font-krona mb-3'>8. Preventive Measures:-</h2>
                         <p className='mb-3 info-text'>To minimize losses, companies can adopt the following strategies:</p>
                         <p className='mb-1 pl-3'> <span className='text-md font-krona'> - Improved Packaging Design:-</span> <span className='info-text'>Using more durable, eco-friendly materials with better shock absorption for large or delicate items.</span></p>
                         <p className='mb-1 pl-3'> <span className='text-md font-krona'> - Smart Packaging Technologies:-</span> <span className='info-text'>RFID tags or sensors to track product conditions during shipment.</span></p>
                         <p className='mb-1 pl-3'> <span className='text-md font-krona'> - Training for Packaging and Handling Staff:-</span> <span className='info-text'>Proper handling techniques can reduce damage during loading and transportation.</span></p>
                         <p className='mb-1 pl-3'> <span className='text-md font-krona'> - Sustainable Packaging:-</span> <span className='info-text'>Using recyclable materials that reduce both damage risk and environmental impact.</span></p>
-                    </div>
+                    </div> */}
 
 
                     <div >
@@ -372,3 +369,6 @@ function WhyEPE() {
 }
 
 export default WhyEPE
+
+
+

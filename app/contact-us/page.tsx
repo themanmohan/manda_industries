@@ -180,6 +180,10 @@ const Contact = () => {
             <ManagmentContactCard key={i} {...managementContact} />
           ))}
          </section>
+
+
+
+         
      
       </section >
  

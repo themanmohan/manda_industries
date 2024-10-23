@@ -136,7 +136,8 @@ textarea {
 }
 
 .whitespace{
-  padding: 0 5%  !important;
+  padding-left: 5% !important;
+  padding-right: 5% !important;
 }
 
 
