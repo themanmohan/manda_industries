@@ -1,4 +1,4 @@
-import Navbar from "./Navbar"
+
 import Footer from "./Footer";
 import Button from "./Button";
 import ShoeCard from "./ShoeCard‎";
@@ -10,7 +10,6 @@ import HeroBanner from "./HeroBanner";
 import CarouselSection from "./Carousel";
 
 export {
-    Navbar,
     Button,
     ShoeCard,
     ReviewCard,

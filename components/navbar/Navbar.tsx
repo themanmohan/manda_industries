@@ -27,18 +27,23 @@ import {
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import Logo from "@/assets/logo/logo.jpg";
-import Button from './Button';
-const products = [
-  { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-  { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-  { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-  { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
-]
+import Button from '../Button';
+import NavProductCard from './NavProductCard';
 
 import { LeftArrow } from '@/assets/svgIcon';
 
 import Link from "next/link"
+import { EPE1, EPE2, AIRBUBBLE2, AIRBUBBLE1 } from "@/assets/images"
+
+
+const products = [
+  { name: 'Analytics',  img: EPE1 },
+  { name: 'Engagement', img: AIRBUBBLE1 },
+  { name: 'Security',   img: EPE1 },
+  { name: 'Integrations', img: AIRBUBBLE2 },
+  { name: 'Automations', img: EPE1 },
+  { name: 'Automations', img: AIRBUBBLE1 },
+]
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -88,24 +93,12 @@ export default function Navbar() {
 
             <PopoverPanel
               transition
-              className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+              className="absolute -left-8 top-full z-[10000000] mt-3 w-screen max-w-md overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
             >
-              <div className="p-4 flex flex-wrap">
+              <div className="p-4 flex gap-3 flex-wrap justify-center">
                 {products.map((item) => (
-                  <div
-                    key={item.name}
-                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
-                  >
-
-                    <div>
-                      Image
-                    </div>
-
-                    <div>
-                        <h2>title</h2>
-                        <p>sub description</p>
-                    </div>
-                  </div>
+                  <NavProductCard title={item.name} imageURL={item.img} />
+                 
                 ))}
               </div>
            

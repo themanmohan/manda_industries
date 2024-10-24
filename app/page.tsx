@@ -1,8 +1,7 @@
 "use client"
- 
+ import React,{useState} from "react"
 import Image from "next/image";
-// import { shoes } from "../constants";
-import { Button,Stats, ShoeCard } from "../components";
+import { Button } from "../components";
 import CustomerReviews from "@/sections/CustomerReviews";
 import Link from "next/link"
 import Carousel from 'react-multi-carousel';
@@ -10,9 +9,13 @@ import 'react-multi-carousel/lib/styles.css';
 import PdfGenerator from "@/components/PdfGenerator";
 import { AIRBUBBLE1, AIRBUBBLE2, EPE1, EPE2 } from "@/assets/images"
 
-import { useState } from "react";
-import { shoes } from "../constants";
+import { HeroSection } from "@/sections";
 
+
+import { Stats, ShoeCard } from "@/components";
+import 'react-multi-carousel/lib/styles.css';
+
+import { shoes } from "../constants";
 
 
 export default function Home() {
@@ -51,62 +54,62 @@ export default function Home() {
   return (
     <>
       <section className="w-full flex xl:flex-row flex-col justify-center min-h-screen gap-10 max-container xl:padding-l wide:padding-r padding-b bg-white">
-        <div className="z-10 relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-10">
-          <p className="text-xl font-krona text-coral-red">
-            Our Product
-          </p>
+    <div className="z-10 relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-10">
+      <p className="text-xl font-krona text-coral-red">
+        Our Product
+      </p>
 
-          <h1 className="mt-10 font-palanquin text-8xl max-sm:text-[72px] max-sm:leading-[82px] font-bold">
+      <h1 className="mt-10 font-palanquin text-8xl max-sm:text-[72px] max-sm:leading-[82px] font-bold">
 
-            <span className="xl:bg-white xl:whitespace-nowrap relative z-10 pr-10">
-              Safe and Reliable
-            </span>
-            <br />
+        <span className="xl:bg-white xl:whitespace-nowrap relative z-10 pr-10">
+          Safe and Reliable
+        </span>
+        <br />
 
-            <span className="text-coral-red inline-block mt-3 ">
-              EPE Foam
-            </span>
-          </h1>
+        <span className="text-coral-red inline-block mt-3 ">
+          EPE Foam
+        </span>
+      </h1>
 
-          <p className="font-sans text-slate-gray text-lg leading-8 mt-6 mb-14 sm:max-w-sm">
-            Customizable foam packaging designed to safeguard your products during transit and storage.
-          </p>
+      <p className="font-sans text-slate-gray text-lg leading-8 mt-6 mb-14 sm:max-w-sm">
+        Customizable foam packaging designed to safeguard your products during transit and storage.
+      </p>
 
 
-          <Button label='Contact Us' btnLink="contact-us" />
+      <Button label='Contact Us' btnLink="contact-us" />
 
-          <Stats />
+      <Stats />
 
-        </div>
+    </div>
 
-        <div className="relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-40 bg-primary bg-hero bg-cover bg-center -z-100">
-          <Image
-            src={bigShoeImg}
-            alt='shoe colletion'
-            width={610}
-            height={102}
-            style={{height:"600px"}}
-            className='object-contain relative z-10 rotate-[35deg]'
-          />
+    <div className="relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-40 bg-primary bg-hero bg-cover bg-center -z-100">
+      <Image
+        src={bigShoeImg}
+        alt='shoe colletion'
+        width={610}
+        height={102}
+        style={{height:"600px"}}
+        className='object-contain relative z-10 rotate-[35deg]'
+      />
 
-          <div className="flex sm:gap-6 gap-4 absolute -bottom-[5%] sm:left-[10%] max-sm:px-6">
-            {shoes.map((shoe, index) => (
-              <div key={index}>
-                <ShoeCard
-                  index={index}
-                  imgURL={shoe.thumbnail.src}
-                  changeBigShoeImage={(shoe: string) => setBigShoeImg(shoe)} // Added type annotation for clarity
-                  bigShoeImg={bigShoeImg}
-                />
-              </div>
-            ))}
+      <div className="flex sm:gap-6 gap-4 absolute -bottom-[5%] sm:left-[10%] max-sm:px-6">
+        {shoes.map((shoe, index) => (
+          <div key={index}>
+            <ShoeCard
+              index={index}
+              imgURL={shoe.thumbnail.src}
+              changeBigShoeImage={(shoe: string) => setBigShoeImg(shoe)} // Added type annotation for clarity
+              bigShoeImg={bigShoeImg}
+            />
           </div>
-        </div>
+        ))}
+      </div>
+    </div>
 
-      </section>
+  </section>
 
-      <section className="my-20 max-container whitespace">
-        <h1 className="text-4xl font-krona text-center mb-10">OUR <span className="text-coral-red">PRODUCT</span></h1>
+      <section className="my-14 max-container whitespace">
+        <h1 className="text-[2rem] md:text-4xl font-krona text-center mb-10">OUR <span className="text-coral-red">PRODUCT</span></h1>
 
         <div className="sm:block md:flex gap-10 xl:flex mb-10">
 
@@ -154,7 +157,7 @@ export default function Home() {
             <h1 className="text-2xl font-krona pb-5">EPE FORM</h1>
             <p className="pb-5 info-text">Air bubble film better known as bubble wrap is a Low Density Polyethylene Film (LDPE) based film commonly used for packaging and protecting delicate products. This multilayer film encloses air within a bubble shaped hemispherical outer layer of film providing cushioning effect to fragile products. The added advantages of Air Bubble Film is that it isolates vibration and shock, thus reducing damages during transit to the minimal</p>
             <Button label="Explore More" />
-            <PdfGenerator />
+            {/* <PdfGenerator /> */}
           </div>
 
           <div className="xl:w-1/3 md:w-1/2  flex flex-col justify-center">

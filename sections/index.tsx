@@ -1,6 +1,6 @@
-import Hero from "./Hero";
+import HeroSection from "./HeroSection";
 import SpecialOffer from "./SpecialOffer"
 export {
-    Hero,
+    HeroSection,
     SpecialOffer
 }

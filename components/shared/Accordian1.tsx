@@ -166,12 +166,12 @@ export default function Accordion1() {
           <h2 id={`accordion-flush-heading-${index + 1}`}>
             <button
               type="button"
-              className="flex items-center justify-between w-full py-5 rtl:text-right  border-b border-gray-200 dark:border-gray-70 gap-3"
+              className="flex items-center justify-between w-full pt-3 rtl:text-right  border-b border-gray-200 dark:border-gray-70 gap-3"
               onClick={() => toggleAccordion(index + 1)}
               aria-expanded={activeIndex === index + 1}
               aria-controls={`accordion-flush-body-${index + 1}`}
             >
-                <h2 className='text-2xl font-krona mb-3'>{index+1}. {advantage?.title}:-</h2>
+                <h2 className='text-md text-left font-krona mb-3'>{index+1}. {advantage?.title}:-</h2>
               <svg
                 data-accordion-icon
                 className={`w-3 h-3 ${activeIndex === index + 1 ? 'rotate-180' : ''} shrink-0`}
@@ -192,7 +192,7 @@ export default function Accordion1() {
           </h2>
           <div
             id={`accordion-flush-body-${index + 1}`}
-            className={`${activeIndex === index + 1 ? 'block' : 'hidden'}`}
+            className={`mt-5 ${activeIndex === index + 1 ? 'block' : 'hidden'}`}
             aria-labelledby={`accordion-flush-heading-${index + 1}`}
           >
             
