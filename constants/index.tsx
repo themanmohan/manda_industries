@@ -30,13 +30,13 @@ export const reviews = [
         feedback: "The product not only met but exceeded my expectations. I'll definitely be a returning customer!"
     },
     {
-        imgURL: customer2,
+        imgURL: blogImg1,
         customerName: 'Lota Mongeskar',
         rating: 4.5,
         feedback: "The product not only met but exceeded my expectations. I'll definitely be a returning customer!"
     },
     {
-        imgURL: customer2,
+        imgURL: blogImg2,
         customerName: 'Lota Mongeskar',
         rating: 4.5,
         feedback: "The product not only met but exceeded my expectations. I'll definitely be a returning customer!"
@@ -118,9 +118,6 @@ export const managementContacts = [
 
 ];
 
-
-
-
 export const blogs = [
     {
   
@@ -128,21 +125,18 @@ export const blogs = [
       title:"Why Choose EPE",
       body:"Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind textEven the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text",
       tags:["EPE","package","news"],
-      readTime:9,
     },
     {
       thumbnail:blogImg2,
       title:"Why Choose EPE",
       body:"Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind textEven the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text",
       tags:["EPE","package","news"],
-      readTime:9,
     },
     {
       thumbnail:blogImg3,
       title:"Why Choose EPE",
       body:"Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind textEven the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text",
       tags:["EPE","package","news"],
-      readTime:9,
     },
     
   ]

@@ -8,10 +8,9 @@ interface propsType {
   title: string,
   body: string,
   tags:string[],
-  readTime: number
 }
 
-const BlogCard: React.FC<propsType> = ({ thumbnail, title, body, tags, readTime }) => {
+const BlogCard: React.FC<propsType> = ({ thumbnail, title, body, tags }) => {
 
   return (
     <div className="item">

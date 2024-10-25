@@ -1,9 +1,10 @@
 "use client"
-import { star } from "../assets/icons";
+import { star } from "@/assets/icons";
 import Image from "next/image"
+
 const ReviewCard = ({ imgURL, customerName, rating, feedback }: { imgURL: string; customerName: string; rating: number; feedback: string }) => {
   return (
-    <div className='flex justify-center items-center flex-col mt-5'>
+    <div className='flex justify-center items-center flex-col mt-5 hover:bg-slate-200 py-10 rounded-md'>
       <Image
         src={imgURL}
         alt='customer'
