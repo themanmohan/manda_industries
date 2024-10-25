@@ -7,7 +7,7 @@ import PopularProductCard from "./PopularProductCard";
 import ServiceCard from "./ServiceCard";
 import ReviewCard from "./ReviewCard";
 import HeroBanner from "./HeroBanner";
-import CarouselSection from "./Carousel";
+
 
 export {
     Button,
@@ -17,6 +17,5 @@ export {
     Stats,
     Footer,
     PopularProductCard,
-    HeroBanner,
-    CarouselSection
+    HeroBanner
 }

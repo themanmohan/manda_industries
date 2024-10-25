@@ -1,51 +1,47 @@
 "use client"
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface ShoeCardProps {
-  imgURL: { thumbnail: string; bigShoe: string };
-  changeBigShoeImage: (shoe: string) => void;
-  bigShoeImg: string;
+  id: number,
+  selectedProduct: { // Define the structure of the selectedProduct object
+    id: number;
+    title: string;
+    desc: string;
+    img: {
+      thumbnail: StaticImageData;
+      subThumbnail: StaticImageData;
+    };
+  };
+  index: number;
+  imgURL: string | StaticImageData;
+  changeHandler: (id: number) => void,
+  changeBigShoeImage: (shoe: string | StaticImageData) => void;
+  bigShoeImg: string | StaticImageData;
 }
 
-const ShoeCard: React.FC<ShoeCardProps> = ({ imgURL, changeBigShoeImage, bigShoeImg }) => {
-  console.log("imgURL",imgURL)
-  console.log("bigShoeImg",bigShoeImg)
-    const handleClick = () => {
-      if (bigShoeImg !== imgURL.bigShoe) {
-        changeBigShoeImage(imgURL.bigShoe);
-      }
-    };
-  
-    return (
-      <div
-        className={`border-2 rounded-xl ${
-          bigShoeImg === imgURL
-            ? "border-coral-red"
-            : "border-transparent"
-        } cursor-pointer max-sm:flex-1`}
-        onClick={handleClick}
-      >
-        <div className='flex justify-center items-center bg-card bg-center bg-cover sm:w-40 sm:h-40 rounded-xl max-sm:p-4 bg-gray-300'>
-          {/* <Image
-            src={imgURL.thumbnail}
-            alt='shoe colletion'
-            width={127}
-            height={103.34}
-            style={{height"100px}}
-            className='object-contain'
-          /> */}
+const ShoeCard = ({ imgURL, changeBigShoeImage, bigShoeImg, id, changeHandler, selectedProduct }: ShoeCardProps) => {
 
-          <Image
+  return (
+    <div
+      onClick={()=>{changeHandler(id)}}
+      className={`border-2 rounded-xl ${
+        selectedProduct.id === id
+          ? "border-coral-red"
+          : "border-transparent"
+      } cursor-pointer max-sm:flex-1`}
+      // onClick={handleClick}
+    >
+      <div className='flex justify-center items-center bg-card bg-center bg-cover sm:w-40 sm:h-40 rounded-xl max-sm:p-4'>
+        <Image
           src={imgURL}
-          alt='shoe collection'
-          width={127}
-          height={103.34}
-          style={{ height: '100px' }}
+          alt='shoe colletion'
+          width={100}
+          height={70}
           className='object-contain'
         />
-        </div>
       </div>
-    );
-  };
-  
-  export default ShoeCard;
+    </div>
+  );
+};
+
+export default ShoeCard;

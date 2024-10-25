@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Image from "next/image"
-
+import { navProducts } from '@/constants/products';
 import { usePathname } from 'next/navigation';
 import {
   Dialog,
@@ -16,12 +16,7 @@ import {
   PopoverPanel,
 } from '@headlessui/react'
 import {
-  ArrowPathIcon,
   Bars3Icon,
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
   XMarkIcon,
 
 } from '@heroicons/react/24/outline'
@@ -31,26 +26,14 @@ import Button from '../Button';
 import NavProductCard from './NavProductCard';
 
 import { LeftArrow } from '@/assets/svgIcon';
-
 import Link from "next/link"
-import { EPE1, EPE2, AIRBUBBLE2, AIRBUBBLE1 } from "@/assets/images"
-
-
-const products = [
-  { name: 'Analytics',  img: EPE1 },
-  { name: 'Engagement', img: AIRBUBBLE1 },
-  { name: 'Security',   img: EPE1 },
-  { name: 'Integrations', img: AIRBUBBLE2 },
-  { name: 'Automations', img: EPE1 },
-  { name: 'Automations', img: AIRBUBBLE1 },
-]
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const pathname = usePathname();
 
   return (
-    <header className="bg-white top-0 z-40000">
+    <header className="bg-white top-0 z-40000 ">
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
@@ -96,7 +79,7 @@ export default function Navbar() {
               className="absolute -left-8 top-full z-[10000000] mt-3 w-screen max-w-md overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
             >
               <div className="p-4 flex gap-3 flex-wrap justify-center">
-                {products.map((item) => (
+                {navProducts.map((item) => (
                   <NavProductCard title={item.name} imageURL={item.img} />
                  
                 ))}
@@ -144,33 +127,32 @@ export default function Navbar() {
                     <ChevronDownIcon aria-hidden="true" className="h-5 w-5 flex-none group-data-[open]:rotate-180" />
                   </DisclosureButton>
                   <DisclosurePanel className="mt-2 space-y-2">
-                    {[...products].map((item) => (
-                      <DisclosureButton
-                        key={item.name}
-                        as="a"
-                        href={item.href}
-                        className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                      >
-                        {item.name}
-                      </DisclosureButton>
-                    ))}
+                  <div className="p-4 flex gap-3 flex-wrap justify-center">
+                {navProducts.map((item) => (
+                  <NavProductCard title={item.name} imageURL={item.img} />
+                 
+                ))}
+              </div>
                   </DisclosurePanel>
                 </Disclosure>
                 <Link
+                onClick={()=>{setMobileMenuOpen(false)}}
                   href="about-us"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 font-krona"
+                  className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 font-krona ${pathname === '/' ? 'border-b-2 border-coral-red' : ''}`}
                 >
                   About Us
                 </Link>
                 <Link
+                onClick={()=>{setMobileMenuOpen(false)}}
                   href="why-epe"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 font-krona"
+                  className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 font-krona ${pathname === '/' ? 'border-b-2 border-coral-red' : ''}`}
                 >
                   Why EPE
                 </Link>
                 <Link
+                onClick={()=>{setMobileMenuOpen(false)}}
                   href="contact-us"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 font-krona"
+                  className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 font-krona ${pathname === '/' ? 'border-b-2 border-coral-red' : ''}`}
                 >
                   Contact Us
                 </Link>

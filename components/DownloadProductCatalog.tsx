@@ -1,9 +1,8 @@
-
 "use client"
 import { NextPage } from 'next';
 import { PDFDocument, rgb } from 'pdf-lib';
 import { useState } from 'react';
-
+import Image from 'next/image';
 // Define the product type
 interface Product {
   id: number;
@@ -18,7 +17,12 @@ const products: Product[] = Array.from({ length: 10 }, (_, i) => ({
   image: `https://picsum.photos/seed/${i + 1}/200/300`, // Random image from picsum.photos
 }));
 
-const PdfGenerator: NextPage = () => {
+// Define the props interface
+interface DownloadProductCatalogProps {
+  iconURL?: string; // Make it optional if not always provided
+}
+
+const DownloadProductCatalog: NextPage<DownloadProductCatalogProps> = ({ iconURL }) => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   // Helper function to fetch the image data as a Uint8Array
@@ -133,20 +137,19 @@ const PdfGenerator: NextPage = () => {
 
 <button
 onClick={generatePDF} disabled={isLoading}
-className={`flex justify-center items-center gap-2 px-5 py-3 border font-krona text-sm leading-none bg-coral-red text-white border-coral-red w-full`}
+className={`flex justify-center w-auto items-center gap-2 px-5 py-3 border font-krona text-sm rounded-md leading-none bg-coral-red text-white border-coral-red`}
 >
-{isLoading ? 'Generating PDF...' : 'Download Product List as PDF'}
+{isLoading ? 'Please Wait...' : 'Download Product Catalog'}
 
-{/* {iconURL && (
+{iconURL && (
   <Image
     src={iconURL}
     alt='arrow right icon'
   />
-)} */}
+)}
 
 </button>
   );
 };
 
-export default PdfGenerator;
-
+export default DownloadProductCatalog;
