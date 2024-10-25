@@ -79,8 +79,8 @@ export default function Navbar() {
               className="absolute -left-8 top-full z-[10000000] mt-3 w-screen max-w-md overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
             >
               <div className="p-4 flex gap-3 flex-wrap justify-center">
-                {navProducts.map((item) => (
-                  <NavProductCard title={item.name} imageURL={item.img} />
+                {navProducts.map((item,i) => (
+                  <NavProductCard key={i} title={item.name} imageURL={item.img} />
                  
                 ))}
               </div>
@@ -128,8 +128,8 @@ export default function Navbar() {
                   </DisclosureButton>
                   <DisclosurePanel className="mt-2 space-y-2">
                   <div className="p-4 flex gap-3 flex-wrap justify-center">
-                {navProducts.map((item) => (
-                  <NavProductCard title={item.name} imageURL={item.img} />
+                {navProducts.map((item,i) => (
+                  <NavProductCard key={i} title={item.name} imageURL={item.img} />
                  
                 ))}
               </div>

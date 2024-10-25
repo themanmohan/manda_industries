@@ -1,26 +1,13 @@
 import { facebook, instagram, twitter } from "../assets/icons";
-import { customer1, customer2, EPE1, AIRBUBBLE2,AIRBUBBLE1 } from "../assets/images";
-
+import { customer1, customer2 } from "../assets/images";
+import blogImg1 from "@/assets/images/product/nav-product/air bubble roll.jpeg"
+import blogImg2 from "@/assets/images/product/nav-product/Expanded-Polyethylene-Foam-8.jpeg"
+import blogImg3 from "@/assets/images/product/nav-product/epe roll-1.jpeg"
 export const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about-us", label: "About Us" },
     { href: "#products", label: "Products" },
     { href: "#contact-us", label: "Contact Us" },
-];
-
-export const shoes = [
-    {
-        thumbnail: EPE1,
-        bigShoe: EPE1,
-    },
-    {
-        thumbnail: AIRBUBBLE2,
-        bigShoe: AIRBUBBLE2,
-    },
-    {
-        thumbnail: AIRBUBBLE1,
-        bigShoe: AIRBUBBLE1,
-    },
 ];
 
 export const statistics = [
@@ -137,44 +124,26 @@ export const managementContacts = [
 export const blogs = [
     {
   
-      thumbnail:" https://res.cloudinary.com/hpnoardgude/image/upload/v1728202052/CropImage_cxpukm.jpg",
+      thumbnail:blogImg1,
       title:"Why Choose EPE",
       body:"Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind textEven the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text",
       tags:["EPE","package","news"],
       readTime:9,
-       auther:"Manmohan"
     },
     {
-      thumbnail:" https://res.cloudinary.com/hpnoardgude/image/upload/v1728202052/CropImage_cxpukm.jpg",
+      thumbnail:blogImg2,
       title:"Why Choose EPE",
       body:"Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind textEven the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text",
       tags:["EPE","package","news"],
       readTime:9,
-      auther:"Manmohan"
     },
     {
-      thumbnail:"",
+      thumbnail:blogImg3,
       title:"Why Choose EPE",
       body:"Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind textEven the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text",
       tags:["EPE","package","news"],
       readTime:9,
-       auther:"Manmohan"
     },
-    {
-      thumbnail:"",
-      title:"Why Choose EPE",
-      body:"Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind textEven the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text",
-      tags:["EPE","package","news"],
-      readTime:9,
-       auther:"Manmohan"
-    },
-    {
-      thumbnail:"",
-      title:"Why Choose EPE",
-      body:"Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind textEven the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text",
-      tags:["EPE","package","news"],
-      readTime:9,
-       auther:"Manmohan"
-    }
+    
   ]
   

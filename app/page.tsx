@@ -1,19 +1,22 @@
 "use client"
 import React,{useState, useEffect} from "react"
 import Image, {StaticImageData} from "next/image";
-import { Button } from "../components";
-import CustomerReviews from "@/sections/CustomerReviews";
+
 import 'react-multi-carousel/lib/styles.css';
-import { AIRBUBBLE1, AIRBUBBLE2, EPE1, EPE2 } from "@/assets/images"
 import { DownloadIcon } from "@/assets/svgIcon";
 
 import DownloadProductCatalog from "@/components/DownloadProductCatalog"
-import { Stats, ShoeCard } from "@/components";
-import 'react-multi-carousel/lib/styles.css';
-
 import CarouselComponent from "@/components/shared/Carousel";
 import BlogCard from "@/components/BlogCard";
+import { Button } from "@/components";
+
+import CustomerReviews from "@/sections/CustomerReviews";
+
 import { blogs } from "@/constants";
+import { Stats, ShoeCard } from "@/components";
+
+import { AIRBUBBLE1, AIRBUBBLE2, EPE1, EPE2 } from "@/assets/images"
+
 
 const heroSectionArr =[
   {
@@ -200,7 +203,7 @@ export default function Home() {
       <section className="max-container whitespace md:px-20  bg-white latest_post_section">
         <h1 className="font-krona text-4xl py-12 text-center">Latest Posts</h1>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-14">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {
             blogs.map((blog, index) => (
               <BlogCard 
@@ -210,7 +213,6 @@ export default function Home() {
                 body={blog?.body}
                 tags={blog?.tags}
                 readTime={blog?.readTime}
-                auther={blog?.auther}
                />
             ))
           }
