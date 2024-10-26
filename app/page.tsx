@@ -170,8 +170,13 @@ export default function Home() {
        <section className="max-container whitespace md:px-20  bg-white latest_post_section">
         <h1 className="font-krona text-4xl py-12 text-center">Catalog</h1>
        
-        <div className="">
+        <div className="text-center">
          <ProductCard />
+
+        </div>
+
+        <div className="flex items-center justify-center w-full">
+        <Button label="Explore More" />
         </div>
       </section>
 

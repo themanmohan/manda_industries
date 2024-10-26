@@ -2,9 +2,7 @@ import React from 'react'
 import Image from "next/image"
 import Carousel from 'react-multi-carousel';
 
-
-import { blogs } from "@/constants";
-
+import { productLists } from '@/constants/products';
 const ProductCard = () => {
 
     const responsive = {
@@ -30,17 +28,17 @@ const ProductCard = () => {
     dotListClass="custom-dot-list-style"
     arrows={false}
   >
-     {blogs.map((blog, index) => (
+     {productLists.map((product, index) => (
     <div key={index} className="boxShadow rounded-md mx-3">
       <div className="images">
-        <Image src={blog.thumbnail} className="rounded-t-md h-[230px]" width={500} height={300} alt={blog.title} />
+        <Image src={product.thumbnail} className="rounded-t-md h-[230px]" width={500} height={300} alt={product?.name} />
       </div>
       <div className="info flex justify-center flex-col pt-2 pb-4 px-6">
         <div className="title">
-          <p className="text-xl my-2 font-krona text-gray-800 hover:text-gray-600">{blog.title}</p>
+          <p className="text-xl my-2 font-krona text-gray-800 hover:text-gray-600">{product?.name}</p>
         </div>
         <p className="text-gray-500 pb-2 font-sans">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatemm
+          {product?.desc}
         </p>
         <button className={`flex justify-center w-auto items-center gap-2 px-5 py-3 border font-krona text-sm rounded-md leading-none bg-coral-red text-white border-coral-red`}>Make Enquiry</button>
       </div>

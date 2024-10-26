@@ -12,3 +12,49 @@ export const navProducts = [
   { name: 'Automations', img: EPE1 },
   { name: 'Automations', img: AIRBUBBLE1 },
 ]
+
+
+export const productLists = [
+  { 
+    name: 'Analytics',
+    desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque rerum eveniet molestias reiciendis, praesentium dignissimos fugit accusantium, repellat beatae, quidem distinctio tempore sunt omnis ut.",
+    thumbnail: AIRBUBBLE2 
+  },
+  { 
+    name: 'Analytics',
+    desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque rerum eveniet molestias reiciendis, praesentium dignissimos fugit accusantium, repellat beatae, quidem distinctio tempore sunt omnis ut.",
+    thumbnail: AIRBUBBLE2 
+  },
+  { 
+    name: 'Analytics',
+    desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque rerum eveniet molestias reiciendis, praesentium dignissimos fugit accusantium, repellat beatae, quidem distinctio tempore sunt omnis ut.",
+    thumbnail: AIRBUBBLE2 
+  }, { 
+    name: 'Analytics',
+    desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque rerum eveniet molestias reiciendis, praesentium dignissimos fugit accusantium, repellat beatae, quidem distinctio tempore sunt omnis ut.",
+    thumbnail: EPE1 
+  },
+  { 
+    name: 'Analytics',
+    desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque rerum eveniet molestias reiciendis, praesentium dignissimos fugit accusantium, repellat beatae, quidem distinctio tempore sunt omnis ut.",
+    thumbnail: EPE1 
+  },
+  { 
+    name: 'Analytics',
+    desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque rerum eveniet molestias reiciendis, praesentium dignissimos fugit accusantium, repellat beatae, quidem distinctio tempore sunt omnis ut.",
+    thumbnail: EPE1 
+  }, { 
+    name: 'Analytics',
+    desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque rerum eveniet molestias reiciendis, praesentium dignissimos fugit accusantium, repellat beatae, quidem distinctio tempore sunt omnis ut.",
+    thumbnail: EPE1 
+  }, { 
+    name: 'Analytics',
+    desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque rerum eveniet molestias reiciendis, praesentium dignissimos fugit accusantium, repellat beatae, quidem distinctio tempore sunt omnis ut.",
+    thumbnail: EPE1 
+  },
+  { 
+    name: 'Analytics',
+    desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque rerum eveniet molestias reiciendis, praesentium dignissimos fugit accusantium, repellat beatae, quidem distinctio tempore sunt omnis ut.",
+    thumbnail: EPE1 
+  },
+]

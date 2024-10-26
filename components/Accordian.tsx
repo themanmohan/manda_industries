@@ -29,6 +29,7 @@ export default function Accordion() {
 
   return (
     <div id="accordion-flush">
+
       {advatageLists.map((advantage, index) => (
         <div key={index}>  {/* Add key for mapped elements */}
           <h2 id={`accordion-flush-heading-${index + 1}`}>
