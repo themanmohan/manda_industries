@@ -6,7 +6,7 @@ import 'react-multi-carousel/lib/styles.css';
 import { DownloadIcon } from "@/assets/svgIcon";
 
 import DownloadProductCatalog from "@/components/DownloadProductCatalog";
-import ProductCard from "@/components/shared/product/ProductCard"
+import ProductCard from "@/components/shared/product/ProductCarousel"
 import CarouselComponent from "@/components/shared/Carousel";
 import BlogCard from "@/components/BlogCard";
 import { Button } from "@/components";

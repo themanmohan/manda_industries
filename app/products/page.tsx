@@ -1,7 +1,9 @@
 import React from 'react'
 import { HeroBanner } from '@/components'
-import ProductCard2 from '@/components/shared/product/ProductCard2'; // Corrected casing
+import ProductCard2 from '@/components/shared/product/ProductCard'; 
 import { productLists } from '@/constants/products';
+
+
 const Products = () => {
   return (
     <main className=''>
@@ -13,10 +15,11 @@ const Products = () => {
                 productLists.map((product, i)=>{
                     return (
                         <ProductCard2 
-                        key={i}
-                             name={product.name}
-                             thumbnail={product.thumbnail}
-                             desc= {product.desc}
+                          key={i}
+                          name={product.name}
+                          thumbnail={product.thumbnail}
+                          desc= {product.desc}
+                          extraClass='sm:w-[350px] sm:min-w-[350px] w-full'
                         /> 
                     )
                 })
