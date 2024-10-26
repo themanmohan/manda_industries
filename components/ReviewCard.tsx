@@ -4,7 +4,7 @@ import Image from "next/image"
 
 const ReviewCard = ({ imgURL, customerName, rating, feedback }: { imgURL: string; customerName: string; rating: number; feedback: string }) => {
   return (
-    <div className='flex justify-center items-center flex-col mt-5 hover:bg-slate-200 py-10 rounded-md'>
+    <div className='flex justify-center items-center flex-col mt-5 hover:bg-slate-200 py-10 rounded-md px-5'>
       <Image
         src={imgURL}
         alt='customer'

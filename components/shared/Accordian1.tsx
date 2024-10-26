@@ -207,14 +207,7 @@ export default function Accordion1() {
                                return  <li key={list}>- {list}</li>
                             })
                         }
-                  
-                      {/* advantage?.childrenArr.length > 0 && advantage.childrenArr.map((child) => (
-                        
-                      )} */}
-{/*                   
-                        <li>- Increased return rates.</li>
-                        <li>- Repair or replacement costs* borne by manufacturers.</li>
-                        <li>- Financial strain due to *product recalls.</li> */}
+
                     </ul>
                    
                 </div>

@@ -23,22 +23,18 @@ export default BlogDetail
 function Article({ title, img, subtitle, description }: { title: string; img: string; subtitle: string; description: string }) {
 
     return (
-        <>
-            <section className='max-container whitespace md:px-2 py-16 w-2/3'>
-                {/* <div className='flex justify-center'>
-                { author ? <Author></Author> : <></>}
-                </div> */}
+   
+            <section className='max-container whitespace md:px-2 pb-14'>
+              
 
                 <div className="post py-10">
-                    <h1 className='font-krona text-4xl text-center pb-5'>{title || "No Title"}</h1>
+                    <h1 className='font-krona text-4xl text-center pb-3'>{title || "No Title"}</h1>
 
-                    <p className='text-gray-500 font-krona text-xl text-center'>{subtitle || "No Title"}</p>
+                    <p className='text-gray-500 font-krona text-xl text-center mb-5'>{subtitle || "No Title"}</p>
 
-                    <div className="py-10">
-                        <Image src={img || "/"} width={900} height={600} alt="Blog Image" style={{width:"100%"}}></Image>
-                    </div>
-
-                    <div className="content info-text flex flex-col gap-4">
+                        <Image src={img || "/"} width={900} height={600} alt="Blog Image" className='rounded-md' style={{width:"100%"}}></Image>
+                   
+                    <div className="content info-text flex flex-col gap-4 mt-5">
                         {description || "No Description"}
                     </div>
 
@@ -46,19 +42,7 @@ function Article({ title, img, subtitle, description }: { title: string; img: st
 
                 <RalatedBlog />
             </section>
-        </>
+   
     )
 }
 
-
-// function Author({ name, img, designation }: { name: string; img: string; designation: string }) {
-//     return (
-//       <div className="author flex py-5">
-//           <Image src={img || ""} width={60} height={60} className="rounded-full"></Image>        
-//           <div className="flex flex-col justify-center px-4">
-//               <Link href={"/"}><p className="text-md font-bold text-gray-800 hover:text-gray-600">{name || "No Name"}</p></Link>
-//               <span className="text-sm text-gray-500">{designation || ""}</span>
-//           </div>
-//       </div>
-//     )
-//   }

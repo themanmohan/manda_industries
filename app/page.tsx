@@ -5,7 +5,8 @@ import Image, {StaticImageData} from "next/image";
 import 'react-multi-carousel/lib/styles.css';
 import { DownloadIcon } from "@/assets/svgIcon";
 
-import DownloadProductCatalog from "@/components/DownloadProductCatalog"
+import DownloadProductCatalog from "@/components/DownloadProductCatalog";
+import ProductCard from "@/components/shared/product/ProductCard"
 import CarouselComponent from "@/components/shared/Carousel";
 import BlogCard from "@/components/BlogCard";
 import { Button } from "@/components";
@@ -165,6 +166,15 @@ export default function Home() {
       
       </section>
 
+       {/* blog section */}
+       <section className="max-container whitespace md:px-20  bg-white latest_post_section">
+        <h1 className="font-krona text-4xl py-12 text-center">Catalog</h1>
+       
+        <div className="">
+         <ProductCard />
+        </div>
+      </section>
+
       <section className="max-container bg-white whitespace why_epe_section boxShadow-3xl">
 
         <div className="xl:flex md:block">
@@ -174,11 +184,12 @@ export default function Home() {
             <Button label="Know More" btnLink="why-epe" />
           </div>
 
-          <div className="xl:w-2/3 md:w-full xl:border-l-4  xl:mt-0 md:mt-10 xl:border-indigo-500 xl:pl-10 sm:pl-0">
-            <p className="info-text">     Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dicta blanditiis esse adipisci libero optio doloremque cum magnam repellendus rem, sed eos sit doloribus, numquam facere delectus pariatur eum quam!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dicta blanditiis esse adipisci libero optio doloremque cum magnam repellendus rem, sed eos sit doloribus, numquam facere delectus pariatur eum quam!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dicta blanditiis esse adipisci libero optio doloremque cum magnam repellendus rem, sed eos sit doloribus, numquam facere delectus pariatur eum quam!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dicta blanditiis esse adipisci libero optio doloremque cum magnam repellendus rem, sed eos sit doloribus, numquam facere delectus pariatur eum quam!</p>
+          <div className="xl:w-2/3 md:w-full xl:border-l-4  xl:mt-0 md:mt-10 xl:border-indigo-500 xl:pl-10 sm:pl-0 ">
+            <p className="info-text custom-mt-5"> 
+            Polystyrene is a single-impact cushion material. This eliminates any opportunity for reuse as a packaging material. Further, styrene itself is a dangerous chemical, linked to various health issues including cancer, and a serious threat to the environment. Styrofoam packaging products can leach styrene into their surroundings and even into the products they protect. This makes polystyrene much less versatile of a resource, capable of packaging reuse, and much more of a hazard to society.
+            Polyethylene on the other hand, presents all of the necessary properties for continued reuse, minimizing its environmental footprint for every package shipped. It’s durability and capacity to absorb multiple impacts make it a perfect material for reusable packaging solutions.
+            Food Packaging Forum lays out in clear terms which foams are safe for reuse and which are not safe. Polystyrene is “prone to chemical leaching and less suitable for reuse.” In contrast, “plastic containers with the recycling code 2 (high-density polyethylene, HDPE), 4 (low-density polyethylene, LDPE) or 5 (polypropylene, PP) are safest for reuse.
+            </p>
           </div>
 
         </div>

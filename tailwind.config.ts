@@ -21,7 +21,7 @@ const config: Config = {
         krona: ['Krona One', 'sans-serif'],
       },
       boxShadow: {
-        '3xl': '0 10px 40px rgba(0, 0, 0, 0.1)'
+        '3xl': '0 0 10px rgba(51, 51, 51, 0.2)'
       },
       rotate: {
         '35': '35deg',
