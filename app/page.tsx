@@ -133,7 +133,6 @@ export default function Home() {
               selectedProduct={selectedProduct}
               changeHandler={changeHandler}
               imgURL={shoe.img.thumbnail}
-              changeBigShoeImage={(shoe: string | StaticImageData) => setBigShoeImg(shoe)} // Updated type annotation to accept both string and StaticImageData
               bigShoeImg={bigShoeImg}
             />
           </div>
