@@ -15,10 +15,9 @@ interface ShoeCardProps {
   index: number;
   imgURL: string | StaticImageData;
   changeHandler: (id: number) => void,
-  bigShoeImg: string | StaticImageData;
 }
 
-const ShoeCard = ({ imgURL, bigShoeImg, id, changeHandler, selectedProduct }: ShoeCardProps) => {
+const ShoeCard = ({ imgURL, id, changeHandler, selectedProduct }: ShoeCardProps) => {
 
   return (
     <div

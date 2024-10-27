@@ -50,7 +50,6 @@ const heroSectionArr =[
 ];
 
 export default function Home() {
-  const [bigShoeImg, setBigShoeImg] = useState<string | StaticImageData>(EPE1);
   const [selectedProduct, updateProduct] = useState(heroSectionArr[0]);
 
   const productCategories = [{
@@ -133,7 +132,6 @@ export default function Home() {
               selectedProduct={selectedProduct}
               changeHandler={changeHandler}
               imgURL={shoe.img.thumbnail}
-              bigShoeImg={bigShoeImg}
             />
           </div>
         ))}
