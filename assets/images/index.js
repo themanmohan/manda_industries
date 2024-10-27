@@ -1,7 +1,7 @@
-import EPE1 from "./product/EPE1.png";
-import EPE2 from "./product/EPE2.png"
-import AIRBUBBLE1 from "./product/AIRBUBBLE1.png"
-import AIRBUBBLE2 from "./product/AIRBUBBLE2.png"
+import EPE1 from "./product-images/png-images/EPE1.png";
+import EPE2 from "./product-images/png-images/EPE2.png"
+import AIRBUBBLE1 from "./product-images/png-images/AIRBUBBLE1.png"
+import AIRBUBBLE2 from "./product-images/png-images/AIRBUBBLE2.png"
 
 import customer1 from './customer1.jpeg'
 import customer2 from './customer2.svg'
@@ -20,9 +20,9 @@ import costEffiency from "./whyepe/costEffiency.png";
 import performance from "./whyepe/performance.png";
 
 
-import EPECatalog1 from "./product/product_catalog/EPECatalog1.jpeg";
-import EPECatalog2 from "./product/product_catalog/EPECatalog2.jpeg";
-import EPECatalog3 from "./product/product_catalog/EPECatalog3.jpeg";
+import EPECatalog1 from "./product-images/product_catalog/EPECatalog1.jpeg";
+import EPECatalog2 from "./product-images/product_catalog/EPECatalog2.jpeg";
+import EPECatalog3 from "./product-images/product_catalog/EPECatalog3.jpeg";
 
 export {
  

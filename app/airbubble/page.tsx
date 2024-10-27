@@ -6,7 +6,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
 // 
-import { EPE1 } from "@/assets/images/product"
+import { EPE1 } from "@/assets/images/product-images"
 
 import { HeroBanner } from '@/components';
 import ima from "@/assets/images/air_bubble_application/automative_air_bubble_wrap.webp";

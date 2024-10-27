@@ -6,6 +6,13 @@ import DownloadIcon from "./download.svg"
 //heading
 import BigHorizontalLine from "./heading/big-horizontal-line.svg";
 import SmallHorizontalLine from "./heading/sm-horizontal-line.svg";
+
+// why epe page
+import CostEffectiveIcon from "./why-epe/costEffective.svg"
+import DamageIcon from "./why-epe/damage.svg"
+import SustainbilityIcon from "./why-epe/sustainbility.svg"
+import PerformanceIcon from "./why-epe/performance.svg"
+
 export {
     LeftArrow,
     AddressIcon,
@@ -15,5 +22,10 @@ export {
     SmallHorizontalLine,
     BigHorizontalLine,
 
-    DownloadIcon
+    DownloadIcon,
+
+    CostEffectiveIcon,
+    DamageIcon,
+    SustainbilityIcon,
+    PerformanceIcon
 }

@@ -1,8 +1,9 @@
 import { facebook, instagram, twitter } from "../assets/icons";
 import { customer1, customer2 } from "../assets/images";
-import blogImg1 from "@/assets/images/product/nav-product/air bubble roll.jpeg"
-import blogImg2 from "@/assets/images/product/nav-product/Expanded-Polyethylene-Foam-8.jpeg"
-import blogImg3 from "@/assets/images/product/nav-product/epe roll-1.jpeg"
+import blogImg1 from "@/assets/images/product-images/air bubble roll.jpeg"
+import blogImg2 from "@/assets/images/product-images/EPEPackaging4.jpeg"
+import blogImg3 from "@/assets/images/product-images/epe roll-4.jpeg"
+
 export const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about-us", label: "About Us" },
@@ -141,3 +142,5 @@ export const blogs = [
     
   ]
   
+
+ 
