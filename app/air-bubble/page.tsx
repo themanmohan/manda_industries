@@ -5,12 +5,12 @@ import Accordion from "@/components/Accordian";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
-// 
-import EPE1  from "@/assets/images/EPE1.png"
-
 import { HeroBanner } from '@/components';
 import ima from "@/assets/images/air_bubble_application/automative_air_bubble_wrap.webp";
 import Furniture from "@/assets/images/air_bubble_application/furniture_wrap_in_bubble.jpg"
+import {airBubbleData} from "@/constants/products";
+import Heading from "@/components/shared/Heading";
+
 function Airbubble() {
 
     const responsive = {
@@ -21,11 +21,11 @@ function Airbubble() {
         },
         desktop: {
             breakpoint: { max: 3000, min: 1024 },
-            items: 4
+            items: 5
         },
         tablet: {
             breakpoint: { max: 1024, min: 464 },
-            items: 3
+            items: 2
         },
         mobile: {
             breakpoint: { max: 464, min: 0 },
@@ -35,7 +35,6 @@ function Airbubble() {
 
     const responsive2 = {
         superLargeDesktop: {
-            // the naming can be any, depends on you.
             breakpoint: { max: 4000, min: 3000 },
             items: 1
         },
@@ -76,34 +75,13 @@ function Airbubble() {
         }
     ]
 
-    const categories = [
-        {
-            titile: "General purpose Air bubble film",
-            imgURL: "",
-        },
-        {
-            titile: "Anti-Static Air Bubble Film",
-            imgURL: "",
-        },
-        {
-            titile: "VCI (Anti-Rust) Air Bubble Film",
-            imgURL: "",
-        },
-        {
-            titile: "Air Bubble Film Laminated with EPE Foam",
-            imgURL: "",
-        }, {
-            titile: "Air Bubble Film Laminated with Aluminium Foil",
-            imgURL: "",
-        }
-    ]
 
     return (
         <section>
             <HeroBanner lableText="Air Bubble" />
 
-            <div className="sm:block md:flex xl:flex whitespace border max-container bg-white airbubble_section gap-20">
-                <div className="w-1/3 flex flex-col justify-center gap-30 bg-gray-400 rounded-md">
+            <div className="md:flex xl:flex whitespace border max-container bg-white airbubble_section gap-14">
+                <div className="w-full md:w-1/3  flex flex-col justify-center gap-20 bg-gray-400 rounded-md px-10 py-5">
 
                     <Carousel
                         swipeable={false}
@@ -119,27 +97,24 @@ function Airbubble() {
                         dotListClass="custom-dot-list-style"
                         arrows={false} >
 
-                        {[1, 2, 3, 4].map((review, index) => (
-                            <Image key={index} src={EPE1} style={{ height: "300px" }} height={500} alt="SDF" className="mx-auto" />
+                        {airBubbleData?.images.map((img, index) => (
+                            <Image key={index} src={img} style={{ height: "300px" }} height={500} alt="Air bubble" className="mx-auto" />
                         ))}
                     </Carousel>
 
                 </div>
 
-                <div className="w-2/3 flex flex-col justify-center" >
+                <div className="w-full md:w-2/3 mt-5 md:mt-0 flex flex-col justify-center" >
                     <h1 className="text-2xl font-krona pb-5">Introduction About <span className="text-coral-red">Air Bubble</span></h1>
-                    <p className="pb-5 info-text">Air bubble film better known as bubble wrap is a Low Density Polyethylene Film (LDPE) based film commonly used for packaging and protecting delicate products. This multilayer film encloses air within a bubble shaped hemispherical outer layer of film providing cushioning effect to fragile products. The added advantages of Air Bubble Film is that it isolates vibration and shock, thus reducing damages during transit to the minimal</p>
-
+                    <p className="pb-5 info-text">{airBubbleData?.desc}</p>
                 </div>
 
             </div>
 
 
             <div className="whitespace w-full max-container airbubble_section">
-                <h1 className='text-4xl font-krona text-center mb-10'>List Of Products Under <span className='text-coral-red'> Air Bubble Pe Film</span></h1>
+                <h1 className='text-3xl font-krona text-center mb-10'>List Of Products Under <span className='text-coral-red'> Air Bubble Pe Film</span></h1>
                 <div>
-
-                    <h1 className='text-2xl font-krona text-center mb-5'> Category</h1>
 
                     <Carousel
 
@@ -157,17 +132,17 @@ function Airbubble() {
                         dotListClass="custom-dot-list-style"
                         arrows={false} >
 
-                        {categories.map((category, index) => (
+                        {airBubbleData?.categories.map((category, index) => (
                             <div key={index} className="text-center ml-5">
-                                <Image src={EPE1} height={50} width={200} style={{height:"300px", width:"100%"}} alt="SDF" className="mx-aut p-5 bg-gray-300 rounded-md" />
-                                <h3 className="font-krona mt-5">{category?.titile}</h3>
+                                <Image src={category?.imgURL} height={50} width={200} style={{height:"300px", width:"100%"}} alt="SDF" className="rounded-md object-contain" />
+                                <h3 className="font-krona mt-5">{category?.name}</h3>
                             </div>
                         ))}
                     </Carousel>
                 </div>
 
-                <div className="sm:block md:flex xl:flex bg-gray-300 p-5 rounded-md my-10 w-full">
-                    <div className="xl:w-1/3 md:w-full flex justify-center items-center p-10">
+                <div className="lg:flex xl:flex bg-gray-300 p-5 rounded-md my-10 w-full">
+                    <div className="xl:w-1/3 md:w-full flex justify-center items-center px-10">
                         <h1 className="xl:text-3xl md:text-2xl sm:text-4xl font-krona text-center"> Application of <span className='text-coral-red'> Air Bubble Pe Film</span></h1>
                     </div>
                     <div className="xl:w-2/3 md:w-full py-10">
@@ -183,12 +158,10 @@ function Airbubble() {
             </div>
 
             <article className="max-container whitespace mb-10 bg-white airbubble_section">
-                <div className='flex items-center gap-3'>
-                    <h1 className='text-4xl font-krona mb-5'> Is <span className="text-coral-red"> AIR BUBBLE</span> Recyclable?</h1>
-
-                    <span className=""><svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg"><rect y="0.000488281" width="9.88145" height="4.5111" fill="black"></rect></svg></span>
-                    <span className=""><svg width="83" height="5" viewBox="0 0 83 5" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.580078" width="82.3454" height="4.5111" fill="black"></rect></svg></span>
-                </div>
+             
+                <Heading>
+                <h1 className='text-3xl font-krona mb-5'> Is <span className="text-coral-red"> AIR BUBBLE</span> Recyclable?</h1>
+                </Heading>
 
                 <p className="info-text">Yes! This is probably one of the most important characteristics of air bubble polyethylene due to the huge potential impact it can have on the environment.</p>
                 <p className="info-text">Air bubble polyethylene can be melted and reshaped into various shapes multiple times. This is due to its high thermal resistance properties that enable it to maintain its chemical structure even when subjected to high temperatures and turned into molten plastic..</p>
@@ -198,33 +171,31 @@ function Airbubble() {
 
 
             <article className="max-container whitespace mb-10 airbubble_section">
-                <div className='flex items-center gap-3'>
-                    <h1 className='text-4xl font-krona '> What Are The Advantages of <span className="text-coral-red"> AIR BUBBLE WRAP</span></h1>
+               
+                <Heading>
+                <h1 className='text-3xl font-krona '> What Are The Advantages of <span className="text-coral-red"> AIR BUBBLE WRAP</span></h1>
 
-                    <span className=""><svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg"><rect y="0.000488281" width="9.88145" height="4.5111" fill="black"></rect></svg></span>
-                    <span className=""><svg width="83" height="5" viewBox="0 0 83 5" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.580078" width="82.3454" height="4.5111" fill="black"></rect></svg></span>
-                </div>
+                </Heading>
+
                 <Accordion />
             </article>
 
             <div className="max-container whitespace mb-10 bg-white airbubble_section">
-                <div className='flex items-center gap-3'>
-                    <h1 className='text-4xl font-krona mb-7'> Some examples of Applications of <span className="text-coral-red"> AIR BUBBLE WRAP</span>?</h1>
-
-                    <span className=""><svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg"><rect y="0.000488281" width="9.88145" height="4.5111" fill="black"></rect></svg></span>
-                    <span className=""><svg width="83" height="5" viewBox="0 0 83 5" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.580078" width="82.3454" height="4.5111" fill="black"></rect></svg></span>
-                </div>
+             
+                <Heading>
+                    <h1 className='text-3xl font-krona mb-7'> Examples of Applications of <span className="text-coral-red"> AIR BUBBLE WRAP</span>?</h1>
+                </Heading>
 
                 {
                     applicationExamples.map((applicationExample, index) => (
-                        <div key={applicationExample.titile} className="flex w-full gap-10">
+                        <div key={index} className="block md:flex w-full gap-1 max-xl:flex-col-reverse">
                             {index % 2 === 0 ? (
                                 <>
-                                    <div className="w-2/3 mb-10 flex justify-center flex-col">
+                                    <div className="w-full md:w-2/3 mb-10 flex justify-center flex-col order-2 md:order-1">
                                         <h2 className="font-krona mb-3 text-xl">{applicationExample.titile}</h2>
                                         <p className="info-text">{applicationExample.desc}</p>
                                     </div>
-                                    <div className="w-1/3">
+                                    <div className="w-full md:w-1/3 order-2 md:order-1">
                                         <Image src={ima} style={{
                                             width: "100%"
                                         }} width={200} height={200} alt="asd" />
@@ -232,12 +203,12 @@ function Airbubble() {
                                 </>
                             ) : (
                                 <>
-                                    <div className="w-1/3 mb-10 ">
+                                    <div className="w-full md:w-1/3 mb-10 ">
                                         <Image src={Furniture} style={{
                                             width: "100%"
                                         }} width={200} height={200} alt="asd" />
                                     </div>
-                                    <div className="w-2/3  flex justify-center flex-col">
+                                    <div className="w-full md:w-2/3  flex justify-center flex-col order-1">
                                         <h2 className="font-krona mb-3 text-xl">{applicationExample.titile}</h2>
                                         <p className="info-text">{applicationExample.desc}</p>
                                     </div>

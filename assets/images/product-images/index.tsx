@@ -18,6 +18,9 @@ import EPEPackaging3 from "./EPEPackaging3.jpeg"
 import EPEPackaging4 from "./EPEPackaging4.jpeg"
 import EPEPackaging5 from "./EPEPackaging5.jpeg"
 
+import  Airbubble1  from "./png-images/AIRBUBBLE1.png";
+import  Airbubble2  from "./png-images/AIRBUBBLE2.png";
+
 export {
     AirBubblePouch1,
     AirBubblePouch2,
@@ -38,5 +41,8 @@ export {
     EPEPackaging2,
     EPEPackaging3,
     EPEPackaging4,
-    EPEPackaging5
+    EPEPackaging5,
+
+    Airbubble1,
+    Airbubble2
 }

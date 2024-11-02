@@ -6,8 +6,6 @@ import AIRBUBBLE2 from "./product-images/png-images/AIRBUBBLE2.png"
 import customer1 from './customer1.jpeg'
 import customer2 from './customer2.svg'
 
-import offer from './offer.svg'
-
 
 import thumbnailBackground from './thumbnail-background.svg'
 
@@ -29,8 +27,6 @@ export {
 
     customer1,
     customer2,
-
-    offer,
 
     thumbnailBackground,
     EPE1,

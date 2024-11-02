@@ -1,11 +1,11 @@
 import React from 'react'
 
 function HeroBanner({
-  imgULR="https://res.cloudinary.com/hpnoardgude/image/upload/v1729530993/WhatsApp_Image_1946-07-14_at_09.18.27_mqlqxc.jpg",
+  imgURL="https://res.cloudinary.com/hpnoardgude/image/upload/v1729530993/WhatsApp_Image_1946-07-14_at_09.18.27_mqlqxc.jpg",
   lableText
-}: { imgULR?: string; lableText?: string }) {
+}: { imgURL?: string; lableText?: string }) {
     const backgroundImageStyle = {
-        backgroundImage: `url(${imgULR})`,
+        backgroundImage: `url(${imgURL})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '400px',

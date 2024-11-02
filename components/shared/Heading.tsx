@@ -4,7 +4,7 @@ import {
      SmallHorizontalLine,
 } from "@/assets/svgIcon"
 
-const Heading: React.FC<{ children: React.ReactNode; hideArrowInMobile?: boolean, extraClass?: string }> = ({ children, hideArrowInMobile = false, extraClass }) => {
+const Heading: React.FC<{ children: React.ReactNode; hideArrowInMobile?: boolean, extraClass?: string }> = ({ children, hideArrowInMobile = true, extraClass }) => {
   return (
     <div className={`flex items-center gap-3 mb-4 ${extraClass}`}>
      {children}
