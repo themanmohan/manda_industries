@@ -1,7 +1,8 @@
 "use client"
 import React,{useState, useEffect} from "react"
 import Image from "next/image";
-
+import AOS from "aos"
+import "aos/dist/aos.css";
 import 'react-multi-carousel/lib/styles.css';
 import { DownloadIcon } from "@/assets/svgIcon";
 
@@ -50,6 +51,7 @@ const heroSectionArr =[
 ];
 
 export default function Home() {
+  
   const [selectedProduct, updateProduct] = useState(heroSectionArr[0]);
 
   const productCategories = [{
@@ -85,10 +87,15 @@ export default function Home() {
     return () => clearInterval(interval)
   }, [selectedProduct]);
 
+  useEffect(() => {
+    AOS.init({});
+  }, []);
+
   return (
     <>
+
       <section className="w-full flex xl:flex-row flex-col justify-center gap-10 max-container xl:padding-l wide:padding-r pb-[8rem] bg-white">
-    <div className="z-10 relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-10">
+    <div data-aos="fade-right" className="z-10 relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-10">
       <p className="text-xl font-krona text-coral-red">
         Our Product
       </p>
@@ -114,7 +121,7 @@ export default function Home() {
 
     </div>
 
-    <div className="relative flex-1 flex justify-center items-center max-xl:pt-20 max-xl:pb-[7rem] bg-primary bg-hero bg-cover bg-center -z-100">
+    <div data-aos="fade-left" className="relative flex-1 flex justify-center items-center max-xl:pt-20 max-xl:pb-[7rem] bg-primary bg-hero bg-cover bg-center -z-100">
       <Image
         src={selectedProduct?.img?.thumbnail}
         alt='shoe colletion'

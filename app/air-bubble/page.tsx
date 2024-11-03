@@ -3,11 +3,7 @@
 import Image from "next/image";
 import Accordion from "@/components/Accordian";
 import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
-
 import { HeroBanner } from '@/components';
-import ima from "@/assets/images/air_bubble_application/automative_air_bubble_wrap.webp";
-import Furniture from "@/assets/images/air_bubble_application/furniture_wrap_in_bubble.jpg"
 import {airBubbleData} from "@/constants/products";
 import Heading from "@/components/shared/Heading";
 
@@ -15,7 +11,6 @@ function Airbubble() {
 
     const responsive = {
         superLargeDesktop: {
-      
             breakpoint: { max: 4000, min: 3000 },
             items: 5
         },
@@ -52,30 +47,6 @@ function Airbubble() {
         }
     };
 
-    const applicationExamples = [
-        {
-            titile: "Fragile Items",
-            imgURL: "",
-            desc: "The precious chinaware, glasses, mirrors, artworks such as paintings, and figurines, and vases fall under the category of fragile items. These are delicate and are susceptible to damage. Therefore, bubble wraps are advised as the packaging film to provide the best protection."
-        },
-        {
-            titile: "Sensitive Products",
-            imgURL: "",
-            desc: "Electronics and electrical items are delicate and can be compromised if they are not well protected. Even a gentle fall can result in irreversible damage. Again, these items have to be protected from static-induced electric charge. Wrapping these products in anti-static bubble wrap will ensure that the products are safe even if they happen to fall down and also it will protect the items from electro-static discharge."
-        },
-        {
-            titile: "AUTOMOTIVE",
-            imgURL: "",
-            desc: "Starting from small parts of the vehicle to the whole vehicle bubble wrap packaging is an efficient, safe and easy packing option to consider. Wrapping small products into Air Bubble pouches ensures the safety of the product and bubble wrap laminated with epe foam ensures the safety of the whole vehicle."
-        },
-        {
-            titile: "Furniture",
-            imgURL: "",
-            desc: "These days with mushrooming of e-commerce stores, you can buy your furniture online. The online shops ensure that the product no matter small reaches the customers intact. To ensure that there is no damage to the products delivered, they wrap the items in bubble wrappers. For instance, the glass table tops, glass cabinet doors or any other glass furniture parts that are very fragile are usually wrapped in several layers of air bubble packaging films to provide the much-required cushioning against vibrations and shocks at the time of transit."
-        }
-    ]
-
-
     return (
         <section>
             <HeroBanner lableText="Air Bubble" />
@@ -96,7 +67,6 @@ function Airbubble() {
                         removeArrowOnDeviceType={["tablet", "mobile", "Desktop"]}
                         dotListClass="custom-dot-list-style"
                         arrows={false} >
-
                         {airBubbleData?.images.map((img, index) => (
                             <Image key={index} src={img} style={{ height: "300px" }} height={500} alt="Air bubble" className="mx-auto" />
                         ))}
@@ -112,8 +82,8 @@ function Airbubble() {
             </div>
 
 
-            <div className="whitespace w-full max-container airbubble_section">
-                <h1 className='text-3xl font-krona text-center mb-10'>List Of Products Under <span className='text-coral-red'> Air Bubble Pe Film</span></h1>
+            <div className="whitespace w-full max-container">
+                <h1 className='text-xl md:text-3xl font-krona text-center mb-10'>List Of Products Under <span className='text-coral-red'> Air Bubble Pe Film</span></h1>
                 <div>
 
                     <Carousel
@@ -145,7 +115,7 @@ function Airbubble() {
                     <div className="xl:w-1/3 md:w-full flex justify-center items-center px-10">
                         <h1 className="xl:text-3xl md:text-2xl sm:text-4xl font-krona text-center"> Application of <span className='text-coral-red'> Air Bubble Pe Film</span></h1>
                     </div>
-                    <div className="xl:w-2/3 md:w-full py-10">
+                    <div className="xl:w-2/3 md:w-full py-5 md:py-10">
                         <ol>
                             <li className="info-text">Packing and cushioning material for electrical applicants and precision machine parts, glass and ceramics.</li>
                             <li className="info-text">Surface protective material for stainless steel product, plated product and aluminium construction material.</li>
@@ -157,10 +127,10 @@ function Airbubble() {
 
             </div>
 
-            <article className="max-container whitespace mb-10 bg-white airbubble_section">
+            <article className="max-container whitespace bg-white airbubble_section">
              
                 <Heading>
-                <h1 className='text-3xl font-krona mb-5'> Is <span className="text-coral-red"> AIR BUBBLE</span> Recyclable?</h1>
+                    <h1 className='text-xl md:text-3xl font-krona mb-5'> Is <span className="text-coral-red"> AIR BUBBLE</span> Recyclable?</h1>
                 </Heading>
 
                 <p className="info-text">Yes! This is probably one of the most important characteristics of air bubble polyethylene due to the huge potential impact it can have on the environment.</p>
@@ -170,33 +140,32 @@ function Airbubble() {
             </article>
 
 
-            <article className="max-container whitespace mb-10 airbubble_section">
+            <article className="max-container whitespace airbubble_section">
                
                 <Heading>
-                <h1 className='text-3xl font-krona '> What Are The Advantages of <span className="text-coral-red"> AIR BUBBLE WRAP</span></h1>
-
+                    <h1 className='text-xl md:text-3xl font-krona '> What Are The Advantages of <span className="text-coral-red"> AIR BUBBLE WRAP</span></h1>
                 </Heading>
 
                 <Accordion />
             </article>
 
-            <div className="max-container whitespace mb-10 bg-white airbubble_section">
+            <div className="max-container whitespace bg-white airbubble_section">
              
                 <Heading>
-                    <h1 className='text-3xl font-krona mb-7'> Examples of Applications of <span className="text-coral-red"> AIR BUBBLE WRAP</span>?</h1>
+                    <h1 className='text-xl md:text-3xl font-krona mb-7'> Examples of Applications of <span className="text-coral-red"> AIR BUBBLE WRAP</span>?</h1>
                 </Heading>
 
                 {
-                    applicationExamples.map((applicationExample, index) => (
+                    airBubbleData?.examples.map((example, index) => (
                         <div key={index} className="block md:flex w-full gap-1 max-xl:flex-col-reverse">
                             {index % 2 === 0 ? (
                                 <>
                                     <div className="w-full md:w-2/3 mb-10 flex justify-center flex-col order-2 md:order-1">
-                                        <h2 className="font-krona mb-3 text-xl">{applicationExample.titile}</h2>
-                                        <p className="info-text">{applicationExample.desc}</p>
+                                        <h2 className="font-krona mb-3 text-xl">{example?.name}</h2>
+                                        <p className="info-text">{example?.desc}</p>
                                     </div>
                                     <div className="w-full md:w-1/3 order-2 md:order-1">
-                                        <Image src={ima} style={{
+                                        <Image src={example?.imgURL} style={{
                                             width: "100%"
                                         }} width={200} height={200} alt="asd" />
                                     </div>
@@ -204,17 +173,20 @@ function Airbubble() {
                             ) : (
                                 <>
                                     <div className="w-full md:w-1/3 mb-10 ">
-                                        <Image src={Furniture} style={{
+                                        <Image src={example.imgURL} style={{
                                             width: "100%"
                                         }} width={200} height={200} alt="asd" />
                                     </div>
                                     <div className="w-full md:w-2/3  flex justify-center flex-col order-1">
-                                        <h2 className="font-krona mb-3 text-xl">{applicationExample.titile}</h2>
-                                        <p className="info-text">{applicationExample.desc}</p>
+                                        <h2 className="font-krona mb-3 text-xl">{example?.name}</h2>
+                                        <p className="info-text">{example?.desc}</p>
                                     </div>
                                 </>
+
                             )}
+
                         </div>
+
                     ))
                 }
 

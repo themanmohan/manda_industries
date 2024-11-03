@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import {Footer} from "../components"
 import Navbar from "@/components/navbar/Navbar";
 import "./globals.css";
+import 'react-multi-carousel/lib/styles.css';
 
 
 

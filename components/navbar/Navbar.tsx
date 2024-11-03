@@ -60,15 +60,9 @@ export default function Navbar() {
         <Link href="/" className={`text-sm font-semibold leading-6 text-gray-900 font-krona ${pathname === '/' ? 'border-b-2 border-coral-red' : ''}`}>
               Home
           </Link>
-          <Link href="/about-us" className={`text-sm font-semibold leading-6 text-gray-900 font-krona ${pathname === '/about-us' ? 'border-b-2 border-coral-red' : ''}`}>
-            About Us
-          </Link>
-          <Link href="/why-epe" className={`text-sm font-semibold leading-6 text-gray-900 font-krona ${pathname === '/why-epe' ? 'border-b-2 border-coral-red' : ''}`}>
-            Why EPE
-          </Link>
           <Popover className="relative">
             <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 font-krona">
-            <Link href="/product" className={`text-sm font-semibold leading-6 text-gray-900 font-krona ${pathname === '/product' ? 'border-b-2 border-coral-red' : ''}`}>
+            <Link href="/products" className={`text-sm font-semibold leading-6 text-gray-900 font-krona ${pathname === '/product' ? 'border-b-2 border-coral-red' : ''}`}>
             Product
           </Link>
               <ChevronDownIcon aria-hidden="true" className="h-5 w-5 flex-none text-gray-400" />
@@ -87,8 +81,14 @@ export default function Navbar() {
            
             </PopoverPanel>
           </Popover>
+          <Link href="/why-epe" className={`text-sm font-semibold leading-6 text-gray-900 font-krona ${pathname === '/why-epe' ? 'border-b-2 border-coral-red' : ''}`}>
+            Why EPE
+          </Link>
           <Link href="/contact-us" className={`text-sm font-semibold leading-6 text-gray-900 font-krona ${pathname === '/contact-us' ? 'border-b-2 border-coral-red' : ''}`}>
             Contact Us
+          </Link>
+          <Link href="/about-us" className={`text-sm font-semibold leading-6 text-gray-900 font-krona ${pathname === '/about-us' ? 'border-b-2 border-coral-red' : ''}`}>
+            About Us
           </Link>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">

@@ -31,16 +31,16 @@ export default function Accordion() {
     <div id="accordion-flush">
 
       {advatageLists.map((advantage, index) => (
-        <div key={index}>  {/* Add key for mapped elements */}
+        <div key={index}>
           <h2 id={`accordion-flush-heading-${index + 1}`}>
             <button
               type="button"
-              className="flex items-center justify-between w-full py-5 rtl:text-right info-text border-b border-gray-200 dark:border-gray-70 gap-3"
+              className="flex items-center justify-between w-full py-3 rtl:text-right border-b dark:border-gray-70 gap-3"
               onClick={() => toggleAccordion(index + 1)}
               aria-expanded={activeIndex === index + 1}
               aria-controls={`accordion-flush-body-${index + 1}`}
             >
-              <span className="font-krona">{index+1}. {advantage?.title}</span>
+              <span className="font-krona text-start">{index+1}. {advantage?.title}</span>
               <svg
                 data-accordion-icon
                 className={`w-3 h-3 ${activeIndex === index + 1 ? 'rotate-180' : ''} shrink-0`}
