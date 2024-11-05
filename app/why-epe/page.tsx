@@ -1,12 +1,12 @@
 "use client"
 
 import { HeroBanner } from "@/components"
-import React from 'react';
+import React, {useEffect} from 'react';
 import PieChartSection from "@/components/charts/PieChart"
 import Accordion1 from "@/components/shared/Accordian1"
 import Heading from "@/components/shared/Heading"
 import SubHeading from "@/components/shared/why-epe/SubHeading"
-
+import AOS from "aos"
 import {
     CostEffectiveIcon,
     DamageIcon,
@@ -24,6 +24,12 @@ function WhyEPE() {
         { name: "Group A", value: 20 },
         { name: "Group B", value: 80 },
       ]
+
+    
+  useEffect(() => {
+    AOS.init({});
+  }, []);
+
       
     return (
         <section className="">
@@ -33,7 +39,7 @@ function WhyEPE() {
 
                 <h2 className='text-[2rem] md:text-4xl font-krona py-14'> Comparison of <span className='text-coral-red'>Polyethylene</span> and <span className='text-coral-red'>Polystyrene</span> Based on Key Factors</h2>
    
-                <div className='bg-coral-red flex flex-col md:flex-row w-full justify-evenly py-5 text-white rounded-md' >
+                <div className='bg-coral-red flex flex-col md:flex-row w-full justify-evenly py-5 text-white rounded-md' data-aos="zoom-in">
                     <h1 className='font-krona text-center md:text-left'>POLYTETHYLENE</h1>
                     <span className='font-krona text-center'>vs</span>
                     <h1 className='font-krona text-center md:text-left'>POLYSTYRENE</h1>
@@ -42,7 +48,7 @@ function WhyEPE() {
                 <SubHeading icon={SustainbilityIcon} lableText=" SUSTAINBILITY" />
 
                 <div className='flex flex-col md:flex-row gap-5 w-full px-0 md:px-10 mt-10'>
-                    <div className='w-full md:w-1/2 bg-gray-100 rounded-sm p-10'>
+                    <div className='w-full md:w-1/2 bg-gray-100 rounded-sm p-10' data-aos="fade-right">
                         <h4 className='font-krona'>POLYTETHYLENE</h4>
 
                         <ul className='list-disc text-md info-text pl-5 pt-3'>
@@ -52,7 +58,7 @@ function WhyEPE() {
                             <li className="pb-3">Rate of PE Recycling</li>
                         </ul>
                     </div>
-                    <div className='w-full md:w-1/2 bg-gray-100 rounded-sm p-10'>
+                    <div className='w-full md:w-1/2 bg-gray-100 rounded-sm p-10' data-aos="fade-left">
                         <h4 className='font-krona'>POLYSTYRENE</h4>
 
                         <ul className='list-disc text-md info-text pl-5 pt-3'>
@@ -76,13 +82,13 @@ function WhyEPE() {
 
 
                 <section className='rounded-md py-5 gap-10'>
-                    <div className='w-full xl:border-r md:border-none mb-10'>
+                    <div className='w-full xl:border-r md:border-none mb-10' data-aos="fade-right">
                         <h1 className='text-2xl font-krona mb-5'>Recyclability </h1>
                         <p className='info-text mb-3'>1. Polyethylene vs Polystyrene – Polyethylene (EPE) foam represents a significantly more sustainable packaging solution for a variety of simple reasons. Polyethylene foam is reusable and 100% curbside recyclable as a class 4 material. Additionally, our innovative packaging designs, utilizing polyethylene material, achieve an 80% reduction in material. Reduce-able. Reusable. Recyclable.</p>
                         <p className='info-text mb-3'>2. EPS foam manages a paltry 12% rate of recycling and the overwhelming majority of recycling centers across the United States refuse to accept the class 6 material. What’s worse – polystyrene foam has a consumer recycling rate of only 6%, which means that Styrofoam that makes it to customers almost always ends up in a landfill.</p>
 
                     </div>
-                    <div className='w-full'>
+                    <div className='w-full' data-aos="fade-left">
                         <h1 className='text-2xl font-krona mb-5' >Reusability</h1>
                         <p className='info-text mb-3'>1. Polystyrene is a single-impact cushion material. This eliminates any opportunity for reuse as a packaging material. Further, styrene itself is a dangerous chemical, linked to various health issues including cancer, and a serious threat to the environment. Styrofoam packaging products can leach styrene into their surroundings and even into the products they protect. This makes polystyrene much less versatile of a resource, capable of packaging reuse, and much more of a hazard to society.</p>
                         <p className='info-text mb-3'>2. Polyethylene on the other hand, presents all of the necessary properties for continued reuse, minimizing its environmental footprint for every package shipped. It’s durability and capacity to absorb multiple impacts make it a perfect material for reusable packaging solutions.</p>
@@ -96,12 +102,12 @@ function WhyEPE() {
                 <SubHeading icon={CostEffectiveIcon} lableText="COST EFFICIENCY" />
 
                 <div className='xl:flex gap-16 w-full md:px-10 py-10'>
-                    <div className=' w-full xl:w-1/2'>
+                    <div className=' w-full xl:w-1/2' data-aos="fade-right">
                         <h2 className="font-krona text-2xl pb-5" >Less  Material Means Efficient Shipping</h2>
                         <p className="info-text">Our <span>EP3</span> solution are significantly more cost effective to ship due to optimized <span className="font-krona">lower volumetric size</span> packaging and <span className="font-krona">lay-flat design</span></p>
                     </div>
 
-                    <div className=" mt-5 items-center gap-5 flex">
+                    <div className=" mt-5 items-center gap-5 flex" data-aos="fade-left">
                             <span className="text-coral-red font-krona text-5xl">85%</span>
                             <p className="font-krona !text-2xl">less material then the origin EPS packaging</p>
                         </div>
@@ -112,12 +118,12 @@ function WhyEPE() {
 
 
                 <div className='xl:flex px-0 md:px-10 py-10 gap-16'>
-                    <div className='w-full xl:w-1/2'>
+                    <div className='w-full xl:w-1/2' data-aos="fade-right">
                         <h2 className="font-krona text-2xl mb-5"><span className="text-coral-red">EPS Packaging Designs </span> Versus Over Packaging with <span>EPS</span></h2>
                         <span className="info-text">Our <span className="font-krona">EP3</span> design featuring <span className="font-krona">polyethylene</span> material, achieves a 77% increase in both pallets storage and container quantity. All of these efficiencies corresponds to significant reduction in freight costs</span>
                     </div>
 
-                    <div className='w-full xl:w-1/2'>
+                    <div className='w-full xl:w-1/2' data-aos="fade-left">
                         <div className="flex flex-col gap-10 border-l-4 border-dotted mt-5 md:mt-0">
 
                             <div className="bg-blue-600 py-6 font-krona text-xl px-5">3,360 units per pallet with <span>EP3</span></div>
@@ -142,7 +148,7 @@ function WhyEPE() {
 
             </div>
 
-            <article className='whitespace max-container py-10'>
+            <article className='whitespace max-container py-10' data-aos="zoom-in">
 
                     <Heading hideArrowInMobile={true} > 
                         <h2 className='text-[2rem] md:text-4xl font-krona'> Less packaging leads to more savings</h2> 
@@ -161,7 +167,7 @@ function WhyEPE() {
                 <SubHeading icon={PerformanceIcon}  lableText="CUSHIONING PERFORMANCE" />
 
                 <div className='flex flex-col md:flex-row gap-5 w-full px-0 md:px-10 mt-10'>
-                    <div className='w-full md:w-1/2 bg-gray-100 rounded-sm p-10'>
+                    <div className='w-full md:w-1/2 bg-gray-100 rounded-sm p-10' data-aos="fade-right">
                         <h1 className="font-krona text-center">POLYETHENE</h1>
 
                         <ul className="list-disc text-md info-text pl-5 pt-3">
@@ -171,7 +177,7 @@ function WhyEPE() {
                         </ul>
                     </div>
 
-                    <div className='w-full md:w-1/2 bg-gray-100 rounded-sm p-10'>
+                    <div className='w-full md:w-1/2 bg-gray-100 rounded-sm p-10' data-aos="fade-left">
                         <h1 className="font-krona text-center">POLYSTYRENE</h1>
 
 
@@ -186,7 +192,7 @@ function WhyEPE() {
             </div>
 
 
-            <article className='whitespace max-container py-14'>
+            <article className='whitespace max-container py-14' data-aos="zoom-in">
 
                 <div>
                 
@@ -205,16 +211,16 @@ function WhyEPE() {
       
                 <SubHeading icon={DamageIcon}  lableText="SHIPPING DAMAGE" />
 
-                <div className="text-center flex justify-center my-8 ">
+                <div className="text-center flex justify-center my-8 " data-aos="zoom-in">
                     <p className="w-[80%] md:w-[60%] text-center info-text !text-3xl">By <span>replacing polystyrene,</span> we have helped businesses <span>reduce</span> e-commerce damage rate from <span>20%</span> to <span>1%</span></p>
                 </div>
 
                 <div className="flex flex-col md:flex-row gap-5 w-full px-0 md:px-20">
-                    <div className="w-full md:w-1/2 flex flex-col  justify-center items-center bg-gray-100 rounded-md py-10">
+                    <div className="w-full md:w-1/2 flex flex-col  justify-center items-center bg-gray-100 rounded-md py-10" data-aos="fade-right">
                         <PieChartSection dataArr={chartDataArr1} />
                         <span className="text-[#808080] font-krona text-3xl">1%</span>
                     </div>
-                    <div className="w-full md:w-1/2 flex flex-col justify-center items-center bg-gray-100 rounded-md">
+                    <div className="w-full md:w-1/2 flex flex-col justify-center items-center bg-gray-100 rounded-md" data-aos="fade-left">
                     <PieChartSection dataArr={chartDataArr2} />
                     <span className="text-[#808080] font-krona text-3xl">20%</span>
                     </div>
@@ -227,7 +233,7 @@ function WhyEPE() {
 
             <article className='whitespace max-container airbubble_section'>
 
-                <div>
+                <div data-aos="zoom-out">
                 
                     <Heading hideArrowInMobile={true} > 
                         <h2 className='text-[2rem] md:text-4xl font-krona'> <span className='text-coral-red'>Polyethylene</span> as a replacement for <span className='text-coral-red'>polystyrene</span></h2> 
