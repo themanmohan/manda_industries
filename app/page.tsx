@@ -95,8 +95,7 @@ export default function Home() {
 
   return (
     <>
-
-      <section className="w-full flex xl:flex-row flex-col justify-center gap-10 max-container xl:padding-l wide:padding-r pb-[8rem] bg-white">
+ <section className="w-full flex xl:flex-row flex-col justify-center gap-10 max-container xl:padding-l wide:padding-r pb-[8rem] bg-white">
     <div data-aos="fade-left" className="z-10 relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-10">
       <p className="text-xl font-krona text-coral-red">
         Our Product
@@ -147,8 +146,7 @@ export default function Home() {
       </div>
     </div>
 
-  </section>
-
+  </section> 
       <section className="my-14 max-container whitespace " data-aos="zoom-in">
         <h1 className="text-[2rem] md:text-4xl font-krona text-center mb-10">OUR <span className="text-coral-red">PRODUCT</span></h1>
         {
@@ -181,9 +179,9 @@ export default function Home() {
         <div className="flex items-center justify-center w-full">
         <Button label="Explore More" />
         </div>
-      </section>
+      </section> 
 
-      <section className="max-container whitespace why_epe_section boxShadow-3xl" data-aos="zoom-out">
+      {/* <section className="max-container whitespace why_epe_section boxShadow-3xl" data-aos="zoom-out">
 
         <div className="xl:flex md:block">
 
@@ -201,7 +199,7 @@ export default function Home() {
           </div>
 
         </div>
-      </section>
+      </section> */}
 
 
       {/* Review Section */}

@@ -33,10 +33,10 @@ import {
 
 
 export const navProducts = [
-  { name: 'Analytics',  img: EPE1 },
-  { name: 'Engagement', img: AIRBUBBLE1 },
-  { name: 'Security',   img: EPE1 },
-  { name: 'Integrations', img: AIRBUBBLE2 },
+  { name: 'Fragile Items',  img: EPE1 },
+  { name: 'Sensitive Products', img: AIRBUBBLE1 },
+  { name: 'Automotive',   img: EPE1 },
+  { name: 'Furniture', img: AIRBUBBLE2 },
   { name: 'Automations', img: EPE1 },
   { name: 'Automations', img: AIRBUBBLE1 },
 ]

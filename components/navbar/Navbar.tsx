@@ -62,8 +62,8 @@ export default function Navbar() {
           </Link>
           <Popover className="relative">
             <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 font-krona">
-            <Link href="/products" className={`text-sm font-semibold leading-6 text-gray-900 font-krona ${pathname === '/product' ? 'border-b-2 border-coral-red' : ''}`}>
-            Product
+            <Link href="/products" className={`text-sm font-semibold leading-6 text-gray-900 font-krona ${pathname === '/products' ? 'border-b-2 border-coral-red' : ''}`}>
+            Products
           </Link>
               <ChevronDownIcon aria-hidden="true" className="h-5 w-5 flex-none text-gray-400" />
             </PopoverButton>
@@ -72,7 +72,7 @@ export default function Navbar() {
               transition
               className="absolute -left-8 top-full z-[10000000] mt-3 w-screen max-w-md overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
             >
-              <div className="p-4 flex gap-3 flex-wrap justify-center">
+              <div className="px-4 py-6 flex gap-3 flex-wrap justify-center">
                 {navProducts.map((item,i) => (
                   <NavProductCard key={i} title={item.name} imageURL={item.img} />
                  
@@ -91,9 +91,12 @@ export default function Navbar() {
             About Us
           </Link>
         </PopoverGroup>
+        
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Button label="Enquiry"  borderRadius='rounded-full' iconURL={LeftArrow} btnLink='contact-us' />
-        </div>
+  
+          <Button label="Contact Us"  borderRadius='rounded-full' iconURL={LeftArrow} btnLink='contact-us' />  
+      </div>
+     
       </nav>
 
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
@@ -123,7 +126,9 @@ export default function Navbar() {
               <div className="space-y-2 py-6">
                 <Disclosure as="div" className="-mx-3">
                   <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 font-krona">
-                    Product
+                  <Link href="/products" className={`text-sm font-semibold leading-6 font-krona ${pathname === '/products' ? 'text-coral-red' : 'text-gray-900'}`}>
+            Products
+          </Link>
                     <ChevronDownIcon aria-hidden="true" className="h-5 w-5 flex-none group-data-[open]:rotate-180" />
                   </DisclosureButton>
                   <DisclosurePanel className="mt-2 space-y-2">
@@ -133,26 +138,26 @@ export default function Navbar() {
                  
                 ))}
               </div>
-                  </DisclosurePanel>
+                </DisclosurePanel>
                 </Disclosure>
                 <Link
                 onClick={()=>{setMobileMenuOpen(false)}}
                   href="about-us"
-                  className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 font-krona ${pathname === '/' ? 'border-b-2 border-coral-red' : ''}`}
+                  className={`-mx-3 block rounded-lg px-3 py-2 text-sm font-semibold leading-7 hover:bg-gray-50 font-krona ${pathname === '/about-us' ? ' text-coral-red' : 'text-gray-900'}`}
                 >
                   About Us
                 </Link>
                 <Link
                 onClick={()=>{setMobileMenuOpen(false)}}
                   href="why-epe"
-                  className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 font-krona ${pathname === '/' ? 'border-b-2 border-coral-red' : ''}`}
+                  className={`-mx-3 block rounded-lg px-3 py-2 text-sm font-semibold leading-7 hover:bg-gray-50 font-krona ${pathname === '/why-epe' ? ' text-coral-red' : 'text-gray-900'}`}
                 >
                   Why EPE
                 </Link>
                 <Link
                 onClick={()=>{setMobileMenuOpen(false)}}
                   href="contact-us"
-                  className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 font-krona ${pathname === '/' ? 'border-b-2 border-coral-red' : ''}`}
+                  className={`-mx-3 block rounded-lg px-3 py-2 text-sm font-semibold leading-7 hover:bg-gray-50 font-krona ${pathname === '/contact-us' ? ' text-coral-red' : 'text-gray-900'}`}
                 >
                   Contact Us
                 </Link>
