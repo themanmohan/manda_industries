@@ -3,7 +3,7 @@ import Image from "next/image"
 const SubHeading: React.FC<{ lableText: string, icon: string }> = ({lableText, icon}) => {
   return (
     <div className='flex mt-5 border rounded-md' data-aos="zoom-in">
-    <div className='bg-gray-200 w-[5%] text-center p-3 flex flex-col justify-center items-center'>
+    <div className='bg-gray-200 w-[10%]  md:w-[5%] text-center p-3 flex flex-col justify-center items-center'>
         <Image src={icon}  alt='svgIcon' />
     </div>
 

@@ -1,5 +1,6 @@
 'use client';
-import React from "react";
+import React,{useEffect} from 'react'
+import AOS from "aos"
 import toast from 'react-hot-toast';
 
 import { HeroBanner } from "@/components";
@@ -15,6 +16,10 @@ const Contact = () => {
     notify();
     console.log("Form submitted");
   };
+
+  useEffect(() => {
+    AOS.init({});
+  }, []);
 
   return (
       <section className="mb-14" >

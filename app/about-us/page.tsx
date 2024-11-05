@@ -1,7 +1,13 @@
 
-import React from 'react'
+"use client"
+import React,{useEffect} from 'react'
+import AOS from "aos"
 import { HeroBanner } from "@/components"
 export default function AboutUs() {
+  
+  useEffect(() => {
+    AOS.init({});
+  }, []);
 
   return (
 

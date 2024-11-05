@@ -197,7 +197,9 @@ function WhyEPE() {
                 <div>
                 
 
-                    <Heading hideArrowInMobile={true} >                         <h2 className='text-[2rem] md:text-4xl font-krona'> Protect the package at all costs</h2> </Heading>
+                    <Heading hideArrowInMobile={true} > 
+                        <h2 className='text-[2rem] md:text-4xl font-krona'> Protect the package at all costs</h2>
+                     </Heading>
 
 
                     <p className='mb-3 info-text'>Polyethylene proves to be a better packaging material than polystyrene even when discussing the basics of cushioning performance. Expanded polyethylene foam is capable of withstanding multiple impacts. This makes it a perfect cushioning resource, capable of protecting products throughout their entire transit process</p>
