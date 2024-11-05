@@ -181,7 +181,7 @@ export default function Home() {
         </div>
       </section> 
 
-      {/* <section className="max-container whitespace why_epe_section boxShadow-3xl" data-aos="zoom-out">
+      <section className="max-container whitespace boxShadow-3xl py-14" data-aos="zoom-out">
 
         <div className="xl:flex md:block">
 
@@ -190,7 +190,7 @@ export default function Home() {
             <Button label="Know More" btnLink="why-epe" />
           </div>
 
-          <div className="xl:w-2/3 md:w-full xl:border-l-4  xl:mt-0 md:mt-10 xl:border-indigo-500 xl:pl-10 sm:pl-0 ">
+          <div className="xl:w-2/3 md:w-full xl:border-l-4  mt-5 md:mt-0 xl:border-indigo-500 xl:pl-10 sm:pl-0 ">
             <p className="info-text custom-mt-5"> 
             Polystyrene is a single-impact cushion material. This eliminates any opportunity for reuse as a packaging material. Further, styrene itself is a dangerous chemical, linked to various health issues including cancer, and a serious threat to the environment. Styrofoam packaging products can leach styrene into their surroundings and even into the products they protect. This makes polystyrene much less versatile of a resource, capable of packaging reuse, and much more of a hazard to society.
             Polyethylene on the other hand, presents all of the necessary properties for continued reuse, minimizing its environmental footprint for every package shipped. It’s durability and capacity to absorb multiple impacts make it a perfect material for reusable packaging solutions.
@@ -199,7 +199,7 @@ export default function Home() {
           </div>
 
         </div>
-      </section> */}
+      </section>
 
 
       {/* Review Section */}
