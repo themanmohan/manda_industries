@@ -10,7 +10,8 @@ interface ButtonProps {
   fullWidth?: boolean
   mobileFullWidth?:boolean,
   borderRadius?: string
-  btnLink?: string
+  btnLink?: string,
+  onclick?: () => void
 }
 
 const Button: FC<ButtonProps> = ({
@@ -22,11 +23,13 @@ const Button: FC<ButtonProps> = ({
   fullWidth,
   mobileFullWidth,
   borderRadius = "rounded-md",
-  btnLink="/"
+  btnLink="/",
+  onclick
 }) => {
   return (
     <Link href={`/${btnLink}`} >
       <button
+      onClick={onclick}
         className={`flex justify-center items-center gap-2 px-5 py-3 border font-krona text-sm leading-none
       ${backgroundColor
             ? `${backgroundColor} ${textColor} ${borderColor}`

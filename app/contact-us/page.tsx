@@ -1,11 +1,20 @@
+'use client';
 import React from "react";
-import { Button } from "@/components"
+import toast from 'react-hot-toast';
+
 import { HeroBanner } from "@/components";
 import { managementContacts, officeLocations } from "@/constants";
 import ManagmentContactCard from "@/components/contact-page/ManagmentContactCard";
 import ContactDetailCard from "@/components/contact-page/ContactDetailCard";
 
+const notify = () => toast('Your response has been successfully submitted.');
+
 const Contact = () => {
+
+  const submitFormHandler = () => {
+    notify();
+    console.log("Form submitted");
+  };
 
   return (
       <section className="mb-14" >
@@ -44,7 +53,7 @@ const Contact = () => {
                 <option value="option2">EPE</option>
               </select>
               <label
-                className="mb-2 absolute left-0 -top-3.5 text-black text-sm transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-black peer-focus:-top-4.5 peer-focus:text-sm  pl-2"
+                className="mb-2 absolute left-0 -top-3.5 text-gray-600 text-sm transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-black peer-focus:-top-4.5 peer-focus:text-sm  pl-2"
                 htmlFor="select"
               >
                 Select product
@@ -60,7 +69,7 @@ const Contact = () => {
                   id="name"
                 />
                 <label
-                  className="mb-2 absolute left-0 -top-3.5 text-black text-sm transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-black peer-focus:-top-4.5 peer-focus:text-sm  pl-2"
+                  className="mb-2 absolute left-0 -top-3.5 text-gray-600 text-sm transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-focus:-top-4.5 peer-focus:text-sm  pl-2"
                   htmlFor="name"
                 >
                   Name
@@ -75,7 +84,7 @@ const Contact = () => {
                   id="company"
                 />
                 <label
-                  className="mb-2 absolute left-0 -top-3.5 text-black text-sm transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-black peer-focus:-top-4.5 peer-focus:text-sm  pl-2"
+                  className="mb-2 absolute left-0 -top-3.5 text-gray-600 text-sm transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base  peer-focus:-top-4.5 peer-focus:text-sm  pl-2"
                   htmlFor="company"
                 >
                   Company Name
@@ -93,7 +102,7 @@ const Contact = () => {
                   id="number"
                 />
                 <label
-                  className="mb-2 absolute left-0 -top-3.5 text-black text-sm transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-black peer-focus:-top-4.5 peer-focus:text-sm  pl-2"
+                  className="mb-2 absolute left-0 -top-3.5 text-gray-600  text-sm transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base  peer-focus:-top-4.5 peer-focus:text-sm  pl-2"
                   htmlFor="number"
                 >
                   Contact Number
@@ -108,7 +117,7 @@ const Contact = () => {
                   id="email"
                 />
                 <label
-                  className="mb-2 absolute left-0 -top-3.5 text-black text-sm transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-black peer-focus:-top-4.5 peer-focus:text-sm  pl-2"
+                  className="mb-2 absolute left-0 -top-3.5 text-gray-600 text-sm transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base  peer-focus:-top-4.5 peer-focus:text-sm  pl-2"
                   htmlFor="email"
                 >
                   Email
@@ -128,7 +137,7 @@ const Contact = () => {
                 <option value="option2">Punjab</option>
               </select>
               <label
-                className="mb-2 absolute left-0 -top-3.5 text-black text-sm transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-black peer-focus:-top-4.5 peer-focus:text-sm  pl-2"
+                className="mb-2 absolute left-0 -top-3.5 text-gray-600 text-sm transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-focus:-top-4.5 peer-focus:text-sm  pl-2"
                 htmlFor="state"
               >
                 Select State
@@ -143,7 +152,7 @@ const Contact = () => {
                   id="city"
                 />
                 <label
-                  className="mb-2 absolute left-0 -top-3.5 text-black text-sm transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-black peer-focus:-top-4.5 peer-focus:text-sm  pl-2"
+                  className="mb-2 absolute left-0 -top-3.5 text-gray-600 text-sm transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-focus:-top-4.5 peer-focus:text-sm  pl-2"
                   htmlFor="city"
                 >
                   City/Town/District
@@ -161,15 +170,22 @@ const Contact = () => {
                 id="message"
               ></textarea>
               <label
-                className="mb-2 absolute left-0 -top-3.5 text-black text-sm transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-black peer-focus:-top-4.5 peer-focus:text-sm  pl-2"
+                className="mb-2 absolute left-0 -top-3.5 text-gray-600 text-sm transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-focus:-top-4.5 peer-focus:text-sm  pl-2"
                 htmlFor="message"
               >
                 Enter your message
               </label>
             </div>
 
-            <Button label="Submit" mobileFullWidth={true} />
+            <p
+onClick={submitFormHandler}
+className={`flex justify-center w-auto items-center gap-2 px-5 py-3 border font-krona text-sm rounded-md leading-none bg-coral-red text-white border-coral-red`}
+>
 
+Submit
+
+</p>
+            
           </div>
 
         </div>
