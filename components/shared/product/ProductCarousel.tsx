@@ -15,16 +15,16 @@ const ProductCarousel = () => {
     <Carousel
     swipeable={false}
     draggable={false}
-    showDots={true}
+    showDots={false}
     autoPlay={true}
     responsive={responsive}
     infinite={true}
     autoPlaySpeed={2000}
     customTransition="all .5"
     transitionDuration={500}
-    containerClass="carousel-container"
+    containerClass="product-carousel-container"
     removeArrowOnDeviceType={["tablet", "mobile", "Desktop"]}
-    dotListClass="custom-dot-list-style"
+    dotListClass=""
     arrows={false}
   >
      {productLists.map((product, index) => (

@@ -23,7 +23,7 @@ const ProductCard: React.FC<PorpsType> = ({
           <p className="text-xl my-2 font-krona text-gray-800 hover:text-gray-600">{name}</p>
         </div>
         <p className="text-gray-500 pb-2 font-sans">
-          {desc}ghjgj
+          {desc}
         </p>
         <button className={`flex justify-center w-auto items-center gap-2 px-5 py-3 border font-krona text-sm rounded-md leading-none bg-coral-red text-white border-coral-red`}>Make Enquiry</button>
       </div>

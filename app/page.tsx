@@ -57,11 +57,13 @@ export default function Home() {
   const productCategories = [{
     images: [AIRBUBBLE1, AIRBUBBLE2],
     title: "AIR BUBBLE FOAM",
+    pageLink:"air-bubble",
     desc: "Air bubble film better known as bubble wrap is a Low Density Polyethylene Film (LDPE) based film commonly used for packaging and protecting delicate products. This multilayer film encloses air within a bubble shaped hemispherical outer layer of film providing cushioning effect to fragile products. The added advantages of Air Bubble Film is that it isolates vibration and shock, thus reducing damages during transit to the minimal"
   },
   {
     images: [EPE1, EPE2],
     title: "EPE FOAM",
+    pageLink:"why-epe",
     desc: "Air bubble film better known as bubble wrap is a Low Density Polyethylene Film (LDPE) based film commonly used for packaging and protecting delicate products. This multilayer film encloses air within a bubble shaped hemispherical outer layer of film providing cushioning effect to fragile products. The added advantages of Air Bubble Film is that it isolates vibration and shock, thus reducing damages during transit to the minimal"
   }
 
@@ -95,7 +97,7 @@ export default function Home() {
     <>
 
       <section className="w-full flex xl:flex-row flex-col justify-center gap-10 max-container xl:padding-l wide:padding-r pb-[8rem] bg-white">
-    <div data-aos="fade-right" className="z-10 relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-10">
+    <div data-aos="fade-left" className="z-10 relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-10">
       <p className="text-xl font-krona text-coral-red">
         Our Product
       </p>
@@ -121,7 +123,7 @@ export default function Home() {
 
     </div>
 
-    <div data-aos="fade-left" className="relative flex-1 flex justify-center items-center max-xl:pt-20 max-xl:pb-[7rem] bg-primary bg-hero bg-cover bg-center -z-100">
+    <div data-aos="fade-right" className="relative flex-1 flex justify-center items-center max-xl:pt-20 max-xl:pb-[7rem] bg-primary bg-hero bg-cover bg-center -z-100">
       <Image
         src={selectedProduct?.img?.thumbnail}
         alt='shoe colletion'
@@ -147,12 +149,12 @@ export default function Home() {
 
   </section>
 
-      <section className="my-14 max-container whitespace">
+      <section className="my-14 max-container whitespace " data-aos="zoom-in">
         <h1 className="text-[2rem] md:text-4xl font-krona text-center mb-10">OUR <span className="text-coral-red">PRODUCT</span></h1>
         {
           productCategories.map((productCategory, index)=>{
             return (
-              <div key={productCategory?.title} className={`sm:block md:flex xl:flex gap-10 ${index % 2 !== 0 ? 'flex-row-reverse' : ''} mb-10 sm:mb-0`}>
+              <div key={productCategory?.title} data-aos={index % 2 !== 0 ? "fade-left" : "fade-right"} className={`sm:block md:flex xl:flex gap-10 ${index % 2 !== 0 ? 'flex-row-reverse' : ''} mb-10 sm:mb-0`}>
                 <div className="xl:w-1/3 md:w-1/2 flex flex-col justify-center">
                   <CarouselComponent images={productCategory?.images} />
                 </div>
@@ -160,7 +162,7 @@ export default function Home() {
                 <div className="xl:w-2/3 md:w-1/2 flex flex-col justify-center">
                   <h1 className="text-2xl font-krona pb-5">{productCategory?.title}</h1>
                   <p className="pb-5 info-text">{productCategory?.desc}</p>
-                  <Button label="Explore More" />
+                  <Button label="Explore More" btnLink={`${productCategory?.pageLink}`} />
                 </div>
         
               </div>
@@ -171,20 +173,17 @@ export default function Home() {
       </section>
 
        {/* blog section */}
-       <section className="max-container whitespace md:px-20  bg-white latest_post_section">
-        <h1 className="font-krona text-4xl py-12 text-center">Catalog</h1>
-       
-        <div className="">
-         <ProductCard />
+       <section className="max-container whitespace md:px-20  bg-white latest_post_section" data-aos="zoom-in">
+        <h1 className="font-krona text-3xl py-10 text-center">Catalog</h1>
 
-        </div>
+         <ProductCard />
 
         <div className="flex items-center justify-center w-full">
         <Button label="Explore More" />
         </div>
       </section>
 
-      <section className="max-container bg-white whitespace why_epe_section boxShadow-3xl">
+      <section className="max-container whitespace why_epe_section boxShadow-3xl" data-aos="zoom-out">
 
         <div className="xl:flex md:block">
 
@@ -206,7 +205,7 @@ export default function Home() {
 
 
       {/* Review Section */}
-      <section className='max-container whitespace my-14'>
+      <section className='max-container whitespace py-14 bg-white' data-aos="zoom-in">
 
         <h3 className='font-krona text-center text-4xl'>
           What Our
@@ -222,8 +221,8 @@ export default function Home() {
       </section> 
 
       {/* blog section */}
-      <section className="max-container whitespace md:px-20  bg-white latest_post_section">
-        <h1 className="font-krona text-4xl py-12 text-center">Latest Posts</h1>
+      <section className="max-container whitespace py-14" data-aos="zoom-in">
+        <h1 className="font-krona text-4xl pb-12 text-center">Latest Posts</h1>
        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {
