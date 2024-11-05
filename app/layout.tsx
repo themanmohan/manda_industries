@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import {Footer} from "../components"
 import Navbar from "@/components/navbar/Navbar";
+import "aos/dist/aos.css";
 import "./globals.css";
 import 'react-multi-carousel/lib/styles.css';
 

@@ -2,7 +2,6 @@
 import React,{useState, useEffect} from "react"
 import Image from "next/image";
 import AOS from "aos"
-import "aos/dist/aos.css";
 import 'react-multi-carousel/lib/styles.css';
 import { DownloadIcon } from "@/assets/svgIcon";
 

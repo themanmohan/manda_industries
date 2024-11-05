@@ -8,12 +8,12 @@ import ContactDetailCard from "@/components/contact-page/ContactDetailCard";
 const Contact = () => {
 
   return (
-      <section className="mb-20" >
+      <section className="mb-14" >
     
         <HeroBanner lableText="Contact Us" />
-        <h2 className="text-center text-3xl font-krona mt-12 mb-10 font-semibold">Contact Details</h2>
+        <h2 className="text-center text-3xl font-krona mt-10 mb-8 ">Contact Details</h2>
 
-        <div className="max-container padding-x  padding-l padding-r xl:flex md:block w-full gap-10">
+        <div className="max-container xl:flex md:block w-full gap-10 whitespace" data-aos="fade-right">
      
           <div className="xl:w-1/2 md:w-full flex flex-col justify-center">
 
@@ -32,7 +32,7 @@ const Contact = () => {
 
           </div>
 
-          <div className="xl:w-1/2 md:w-full xl:mt-0 mt-10 bg-lightBlue p-10 rounded-md">
+          <div className="xl:w-1/2 md:w-full xl:mt-0 mt-5 bg-lightBlue p-5 md:p-10 rounded-md "  data-aos="fade-left">
 
             <div className="relative mt-4 mb-14">
               <select
@@ -168,14 +168,14 @@ const Contact = () => {
               </label>
             </div>
 
-            <Button label="Submit" />
+            <Button label="Submit" mobileFullWidth={true} />
 
           </div>
 
         </div>
 
        
-        <section className='mt-10 max-container whitespace flex justify-center flex-wrap gap-9'>
+        <section className='mt-10 max-container whitespace flex justify-center flex-wrap gap-9' data-aos="zoom-in">
           {managementContacts.map((managementContact, i) => (
             <ManagmentContactCard key={i} {...managementContact} />
           ))}
