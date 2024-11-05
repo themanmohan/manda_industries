@@ -8,6 +8,7 @@ interface ButtonProps {
   textColor?: string
   borderColor?: string
   fullWidth?: boolean
+  mobileFullWidth?:boolean,
   borderRadius?: string
   btnLink?: string
 }
@@ -19,6 +20,7 @@ const Button: FC<ButtonProps> = ({
   textColor,
   borderColor,
   fullWidth,
+  mobileFullWidth,
   borderRadius = "rounded-md",
   btnLink="/"
 }) => {
@@ -29,7 +31,7 @@ const Button: FC<ButtonProps> = ({
       ${backgroundColor
             ? `${backgroundColor} ${textColor} ${borderColor}`
             : "bg-coral-red text-white border-coral-red"
-          } ${borderRadius} ${fullWidth && "w-full"}`}
+          } ${borderRadius} ${fullWidth && "w-full"} ${mobileFullWidth && " w-full md:w-auto"}`}
       >
         {label}
 

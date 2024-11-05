@@ -31,8 +31,8 @@ const CarouselComponent: React.FC<PropsTypes> = ({ images }) => (
     arrows={false}
   >
     {images.map((imageURL, index) => (
-      <div key={index} className="bg-gray-400 w-full rounded-lg">
-        <Image src={imageURL} height={500} alt={`Product Image ${index + 1}`} style={{ height: "400px" }} className="mx-auto" />
+      <div key={index} className="bg-gray-400 w-full rounded-lg p-4">
+        <Image src={imageURL} height={500} alt={`Product Image ${index + 1}`} style={{ height: "400px" }} className="mx-auto P-4" />
       </div>
     ))}
   </Carousel>

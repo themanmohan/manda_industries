@@ -32,7 +32,7 @@ const StatsCounter: React.FC<{ finalCount: number, label: string }> = ({ finalCo
 
 const Stats = () => {
   return (
-    <div className="flex justify-center items-start flex-wrap w-full mt-10 sm:mt-20 gap-3 sm:gap-16">
+    <div className="flex items-start flex-wrap w-full mt-10 sm:mt-20 gap-3 sm:gap-16">
       <StatsCounter finalCount={400} label="Total Consumer" />
       <StatsCounter finalCount={940} label="Subscribers" />
       <StatsCounter finalCount={1102} label="Likes" />

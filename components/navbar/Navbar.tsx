@@ -91,7 +91,7 @@ export default function Navbar() {
             About Us
           </Link>
         </PopoverGroup>
-        
+
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
   
           <Button label="Contact Us"  borderRadius='rounded-full' iconURL={LeftArrow} btnLink='contact-us' />  
@@ -126,7 +126,7 @@ export default function Navbar() {
               <div className="space-y-2 py-6">
                 <Disclosure as="div" className="-mx-3">
                   <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 font-krona">
-                  <Link href="/products" className={`text-sm font-semibold leading-6 font-krona ${pathname === '/products' ? 'text-coral-red' : 'text-gray-900'}`}>
+                  <Link href="/products"   onClick={()=>{setMobileMenuOpen(false)}} className={`text-sm font-semibold leading-6 font-krona ${pathname === '/products' ? 'text-coral-red' : 'text-gray-900'}`}>
             Products
           </Link>
                     <ChevronDownIcon aria-hidden="true" className="h-5 w-5 flex-none group-data-[open]:rotate-180" />

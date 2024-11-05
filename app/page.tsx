@@ -148,7 +148,7 @@ export default function Home() {
 
   </section> 
       <section className="my-14 max-container whitespace " data-aos="zoom-in">
-        <h1 className="text-[2rem] md:text-4xl font-krona text-center mb-10">OUR <span className="text-coral-red">PRODUCT</span></h1>
+        <h1 className="text-[2rem] md:text-3xl font-krona text-center mb-10">OUR <span className="text-coral-red">PRODUCT</span></h1>
         {
           productCategories.map((productCategory, index)=>{
             return (
@@ -157,10 +157,10 @@ export default function Home() {
                   <CarouselComponent images={productCategory?.images} />
                 </div>
                 
-                <div className="xl:w-2/3 md:w-1/2 flex flex-col justify-center">
-                  <h1 className="text-2xl font-krona pb-5">{productCategory?.title}</h1>
-                  <p className="pb-5 info-text">{productCategory?.desc}</p>
-                  <Button label="Explore More" btnLink={`${productCategory?.pageLink}`} />
+                <div className="xl:w-2/3 md:w-1/2 flex flex-col justify-center my-10 md:my-0">
+                  <h1 className="text-2xl font-krona pb-5 text-center md:text-left">{productCategory?.title}</h1>
+                  <p className="pb-5 info-text text-center md:text-left">{productCategory?.desc}</p>
+                  <Button label="Explore More" btnLink={`${productCategory?.pageLink}`} mobileFullWidth={true} />
                 </div>
         
               </div>

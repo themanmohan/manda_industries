@@ -16,7 +16,7 @@ const BlogCard: React.FC<propsType> = ({ thumbnail, title, body, tags }) => {
     <div className="item">
       <div className="images">
         <Link href={`/blog/${title}`}>
-        <Image src={thumbnail || ""} className="rounded h-[250px]" width={500} height={400} alt={title} /></Link>
+        <Image src={thumbnail || ""} className="rounded h-[250px] w-[100%]" alt={title} /></Link>
       </div>
       <div className="info flex justify-center flex-col pt-2 pb-4">
 

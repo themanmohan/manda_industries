@@ -139,7 +139,7 @@ const DownloadProductCatalog: NextPage<DownloadProductCatalogProps> = ({ iconURL
 onClick={generatePDF} disabled={isLoading}
 className={`flex justify-center w-auto items-center gap-2 px-5 py-3 border font-krona text-sm rounded-md leading-none bg-coral-red text-white border-coral-red`}
 >
-{isLoading ? 'Please Wait...' : 'Download Product Catalog'}
+{isLoading ? 'Please Wait ...' : 'Download Product Catalog'}
 
 {iconURL && (
   <Image
