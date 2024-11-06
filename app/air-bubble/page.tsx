@@ -1,4 +1,6 @@
 "use client"
+import React,{useEffect} from 'react'
+import AOS from "aos"
 
 import Image from "next/image";
 import Accordion from "@/components/Accordian";
@@ -46,13 +48,17 @@ function Airbubble() {
             items: 1
         }
     };
+    useEffect(() => {
+        AOS.init({});
+      }, []);
+    
 
     return (
         <section>
             <HeroBanner lableText="Air Bubble" />
 
             <div className="md:flex xl:flex whitespace border max-container bg-white airbubble_section gap-14">
-                <div className="w-full md:w-1/3  flex flex-col justify-center gap-20 bg-gray-400 rounded-md px-10 py-5">
+                <div className="w-full md:w-1/3  flex flex-col justify-center gap-20 bg-gray-400 rounded-md px-10 py-5" data-aos="fade-right">
 
                     <Carousel
                         swipeable={false}
@@ -74,7 +80,7 @@ function Airbubble() {
 
                 </div>
 
-                <div className="w-full md:w-2/3 mt-5 md:mt-0 flex flex-col justify-center" >
+                <div className="w-full md:w-2/3 mt-5 md:mt-0 flex flex-col justify-center" data-aos="fade-left" >
                     <h1 className="text-2xl font-krona pb-5">Introduction About <span className="text-coral-red">Air Bubble</span></h1>
                     <p className="pb-5 info-text">{airBubbleData?.desc}</p>
                 </div>
@@ -84,7 +90,7 @@ function Airbubble() {
 
             <div className="whitespace w-full max-container">
                 <h1 className='text-xl md:text-3xl font-krona text-center mb-10'>List Of Products Under <span className='text-coral-red'> Air Bubble Pe Film</span></h1>
-                <div>
+                <div data-aos="zoom-in">
 
                     <Carousel
 
@@ -111,7 +117,7 @@ function Airbubble() {
                     </Carousel>
                 </div>
 
-                <div className="lg:flex xl:flex bg-gray-300 p-5 rounded-md my-10 w-full">
+                <div className="lg:flex xl:flex bg-gray-300 p-5 rounded-md my-10 w-full" data-aos="zoom-out">
                     <div className="xl:w-1/3 md:w-full flex justify-center items-center px-10">
                         <h1 className="xl:text-3xl md:text-2xl sm:text-4xl font-krona text-center"> Application of <span className='text-coral-red'> Air Bubble Pe Film</span></h1>
                     </div>
@@ -127,7 +133,7 @@ function Airbubble() {
 
             </div>
 
-            <article className="max-container whitespace bg-white airbubble_section">
+            <article className="max-container whitespace bg-white airbubble_section" data-aos="zoom-in">
              
                 <Heading>
                     <h1 className='text-xl md:text-3xl font-krona mb-5'> Is <span className="text-coral-red"> AIR BUBBLE</span> Recyclable?</h1>
@@ -149,7 +155,7 @@ function Airbubble() {
                 <Accordion />
             </article>
 
-            <div className="max-container whitespace bg-white airbubble_section">
+            <div className="max-container whitespace bg-white airbubble_section" data-aos="zoom-out">
              
                 <Heading>
                     <h1 className='text-xl md:text-3xl font-krona mb-7'> Examples of Applications of <span className="text-coral-red"> AIR BUBBLE WRAP</span>?</h1>
