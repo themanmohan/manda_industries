@@ -57,7 +57,7 @@ function Airbubble() {
         <section>
             <HeroBanner lableText="Air Bubble" />
 
-            <div className="md:flex xl:flex whitespace border max-container bg-white airbubble_section gap-14">
+            <div className="md:flex xl:flex whitespace border max-container bg-white airbubble_section gap-14" style={{ overflowX: 'hidden' }}>
                 <div className="w-full md:w-1/3  flex flex-col justify-center gap-20 bg-gray-400 rounded-md px-10 py-5" data-aos="fade-right">
 
                     <Carousel
@@ -80,7 +80,7 @@ function Airbubble() {
 
                 </div>
 
-                <div className="w-full md:w-2/3 mt-5 md:mt-0 flex flex-col justify-center" data-aos="fade-left" >
+                <div className="w-full md:w-2/3 mt-5 md:mt-0 flex flex-col justify-center" data-aos="fade-left">
                     <h1 className="text-2xl font-krona pb-5">Introduction About <span className="text-coral-red">Air Bubble</span></h1>
                     <p className="pb-5 info-text">{airBubbleData?.desc}</p>
                 </div>
@@ -88,8 +88,8 @@ function Airbubble() {
             </div>
 
 
-            <div className="whitespace w-full max-container">
-                <h1 className='text-xl md:text-3xl font-krona text-center mb-10'>List Of Products Under <span className='text-coral-red'> Air Bubble Pe Film</span></h1>
+            <div className="whitespace w-full max-container mt-10">
+                <h1 className='text-xl md:text-3xl font-krona text-center'>List Of Products Under <span className='text-coral-red'> Air Bubble Pe Film</span></h1>
                 <div data-aos="zoom-in">
 
                     <Carousel
@@ -117,7 +117,7 @@ function Airbubble() {
                     </Carousel>
                 </div>
 
-                <div className="lg:flex xl:flex bg-gray-300 p-5 rounded-md my-10 w-full" data-aos="zoom-out">
+                <div className="lg:flex xl:flex bg-gray-300 p-5 rounded-md my-10 w-full" >
                     <div className="xl:w-1/3 md:w-full flex justify-center items-center px-10">
                         <h1 className="xl:text-3xl md:text-2xl sm:text-4xl font-krona text-center"> Application of <span className='text-coral-red'> Air Bubble Pe Film</span></h1>
                     </div>
@@ -133,7 +133,7 @@ function Airbubble() {
 
             </div>
 
-            <article className="max-container whitespace bg-white airbubble_section" data-aos="zoom-in">
+            <article className="max-container whitespace bg-white airbubble_section" >
              
                 <Heading>
                     <h1 className='text-xl md:text-3xl font-krona mb-5'> Is <span className="text-coral-red"> AIR BUBBLE</span> Recyclable?</h1>
@@ -155,7 +155,7 @@ function Airbubble() {
                 <Accordion />
             </article>
 
-            <div className="max-container whitespace bg-white airbubble_section" data-aos="zoom-out">
+            <div className="max-container whitespace bg-white airbubble_section">
              
                 <Heading>
                     <h1 className='text-xl md:text-3xl font-krona mb-7'> Examples of Applications of <span className="text-coral-red"> AIR BUBBLE WRAP</span>?</h1>
@@ -163,27 +163,27 @@ function Airbubble() {
 
                 {
                     airBubbleData?.examples.map((example, index) => (
-                        <div key={index} className="block md:flex w-full gap-1 max-xl:flex-col-reverse">
+                        <div key={index} className="block md:flex w-full gap-10 max-md:flex-col-reverse  mb-10">
                             {index % 2 === 0 ? (
                                 <>
-                                    <div className="w-full md:w-2/3 mb-10 flex justify-center flex-col order-2 md:order-1">
+                                    <div className="md:w-2/3 w-full flex justify-center flex-col">
                                         <h2 className="font-krona mb-3 text-xl">{example?.name}</h2>
                                         <p className="info-text">{example?.desc}</p>
                                     </div>
-                                    <div className="w-full md:w-1/3 order-2 md:order-1">
+                                    <div className="md:w-1/3 flex w-full order-2 ">
                                         <Image src={example?.imgURL} style={{
                                             width: "100%"
-                                        }} width={200} height={200} alt="asd" />
+                                        }} width={200} height={200} alt={example?.name}/>
                                     </div>
                                 </>
                             ) : (
                                 <>
-                                    <div className="w-full md:w-1/3 mb-10 ">
+                                    <div className="md:w-1/3 flex  w-full">
                                         <Image src={example.imgURL} style={{
                                             width: "100%"
-                                        }} width={200} height={200} alt="asd" />
+                                        }} alt={example?.name} />
                                     </div>
-                                    <div className="w-full md:w-2/3  flex justify-center flex-col order-1">
+                                    <div className="md:w-2/3 w-full  flex justify-center flex-col ">
                                         <h2 className="font-krona mb-3 text-xl">{example?.name}</h2>
                                         <p className="info-text">{example?.desc}</p>
                                     </div>

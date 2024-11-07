@@ -94,7 +94,7 @@ export default function Home() {
 
   return (
     <>
- <section className="w-full flex xl:flex-row flex-col justify-center gap-10 max-container xl:padding-l wide:padding-r pb-[8rem] bg-white">
+ <section className="w-full flex xl:flex-row flex-col justify-center gap-10 max-container xl:padding-l wide:padding-r pb-[8rem] bg-white overFlow">
     <div data-aos="fade-left" className="z-10 relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-10">
       <p className="text-xl font-krona text-coral-red">
         Our Product
@@ -121,7 +121,7 @@ export default function Home() {
 
     </div>
 
-    <div data-aos="fade-right" className="relative flex-1 flex justify-center items-center max-xl:pt-20 max-xl:pb-[7rem] bg-primary bg-hero bg-cover bg-center -z-100">
+    <div  data-aos="fade-right" className="relative flex-1 flex justify-center items-center max-xl:pt-20 max-xl:pb-[7rem] bg-primary bg-hero bg-cover bg-center -z-100">
       <Image
         src={selectedProduct?.img?.thumbnail}
         alt='shoe colletion'
@@ -146,7 +146,7 @@ export default function Home() {
     </div>
 
   </section> 
-      <section className="my-14 max-container whitespace " data-aos="zoom-in">
+      <section className="my-14 max-container whitespace overFlow" >
         <h1 className="text-[2rem] md:text-3xl font-krona text-center mb-10">OUR <span className="text-coral-red">PRODUCT</span></h1>
         {
           productCategories.map((productCategory, index)=>{
@@ -170,7 +170,7 @@ export default function Home() {
       </section>
 
        {/* blog section */}
-       <section className="max-container whitespace md:px-20  bg-white latest_post_section" data-aos="zoom-in">
+     <section className="max-container whitespace md:px-20  bg-white latest_post_section" data-aos="zoom-in">
         <h1 className="font-krona text-3xl py-10 text-center">Catalog</h1>
 
          <ProductCard />
@@ -180,7 +180,7 @@ export default function Home() {
         </div>
       </section> 
 
-      <section className="max-container whitespace boxShadow-3xl py-14" data-aos="zoom-out">
+   <section className="max-container whitespace boxShadow-3xl py-14" data-aos="zoom-in">
 
         <div className="xl:flex md:block">
 
@@ -198,7 +198,7 @@ export default function Home() {
           </div>
 
         </div>
-      </section>
+      </section> 
 
 
       {/* Review Section */}
@@ -234,7 +234,7 @@ export default function Home() {
             ))
           }
         </div>
-      </section>
+      </section> 
     </>
   )
 

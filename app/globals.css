@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
-
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -67,6 +64,10 @@
  body{
   background-color: rgb(245, 245, 248) !important;
  }
+
+ .overFlow{
+  overflow-x:hidden;
+}
 
 
 @layer utilities {
