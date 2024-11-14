@@ -1,16 +1,24 @@
-import React from 'react'
+"use client"
+import React,{useEffect} from 'react'
+import AOS from "aos"
+
 import { HeroBanner } from '@/components'
 import ProductCard2 from '@/components/shared/product/ProductCard'; 
 import { productLists } from '@/constants/products';
 
 
 const Products = () => {
+
+  useEffect(() => {
+    AOS.init({});
+  }, []);
+
   return (
-    <main className=''>
+    <main>
         <HeroBanner lableText='Products' ></HeroBanner>
 
-        <section className='max-container whitespace  py-14'>
-          <div className='flex flex-wrap gap-y-5'>
+        <section className='max-container whitespace  py-14 overFlow'>
+          <div className='flex flex-wrap gap-y-5' data-aos="zoom-in">
           {
                 productLists.map((product, i)=>{
                     return (

@@ -32,7 +32,7 @@ function WhyEPE() {
 
       
     return (
-        <section className="">
+        <section className="overFlow">
             <HeroBanner lableText="WHY EPE" />
 
             <article className='whitespace max-container bg-white pb-14'>
@@ -72,7 +72,7 @@ function WhyEPE() {
 
             </article>
 
-            <div className='whitespace max-container pt-10 pb-5'>
+            <div className='whitespace max-container pt-10 pb-5 overFlow'>
         
 
                 <Heading hideArrowInMobile={true} > 
@@ -161,7 +161,7 @@ function WhyEPE() {
                     <p className='mb-3 info-text'>To put it simply, polyethylene is a better material choice when it comes to designing packaging solutions. With our proprietary designs utilizing PE foam, we are able to reduce material and improve freight cost savings.</p>
        
             </article>
- 
+
             <div className='max-container whitespace bg-white pb-14 pt-8'>
         
                 <SubHeading icon={PerformanceIcon}  lableText="CUSHIONING PERFORMANCE" />
@@ -191,7 +191,6 @@ function WhyEPE() {
                
             </div>
 
-
             <article className='whitespace max-container py-14' data-aos="zoom-in">
 
                 <div>
@@ -208,12 +207,12 @@ function WhyEPE() {
                 </div>
 
             </article>
-  
-            <div className='max-container whitespace bg-white pb-14 pt-8'>
+
+            <div className='max-container whitespace bg-white pb-14 pt-8' data-aos="zoom-in">
       
                 <SubHeading icon={DamageIcon}  lableText="SHIPPING DAMAGE" />
 
-                <div className="text-center flex justify-center my-8 " data-aos="zoom-in">
+                <div className="text-center flex justify-center my-8 " >
                     <p className="w-[80%] md:w-[60%] text-center info-text !text-3xl">By <span>replacing polystyrene,</span> we have helped businesses <span>reduce</span> e-commerce damage rate from <span>20%</span> to <span>1%</span></p>
                 </div>
 
@@ -232,8 +231,7 @@ function WhyEPE() {
               
             </div>
 
-
-            <article className='whitespace max-container airbubble_section'>
+            <article className='whitespace max-container airbubble_section' data-aos="zoom-in">
 
                 <div data-aos="zoom-out">
                 
