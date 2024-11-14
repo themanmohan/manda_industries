@@ -18,7 +18,7 @@ const Products = () => {
         <HeroBanner lableText='Products' ></HeroBanner>
 
         <section className='max-container whitespace  py-14 overFlow'>
-          <div className='flex flex-wrap gap-y-5' data-aos="zoom-in">
+          <div className='flex flex-wrap gap-y-5'>
           {
                 productLists.map((product, i)=>{
                     return (

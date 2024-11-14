@@ -14,7 +14,7 @@ const ProductCard: React.FC<PorpsType> = ({
     extraClass
 }) => {
   return (
-    <div className={`boxShadow rounded-md mx-3 ${extraClass} flex-1`}>
+    <div className={`boxShadow rounded-md mx-3 ${extraClass} flex-1`}  data-aos="zoom-in">
       <div className="images">
         <Image src={thumbnail}  className='h-[230px]' alt={name} />
       </div>

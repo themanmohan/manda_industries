@@ -176,7 +176,7 @@ export default function Home() {
          <ProductCard />
 
         <div className="flex items-center justify-center w-full">
-        <Button label="Explore More" />
+        <Button label="Explore More" btnLink="products" />
         </div>
       </section> 
 

@@ -33,7 +33,7 @@ function WhyEPE() {
       
     return (
         <section className="overFlow">
-            <HeroBanner lableText="WHY EPE" />
+            <HeroBanner lableText="WHY EPE" imgURL="https://res.cloudinary.com/hpnoardgude/image/upload/v1731602477/PACKAGING_INDUSTRY_byebmi.jpg" />
 
             <article className='whitespace max-container bg-white pb-14'>
 

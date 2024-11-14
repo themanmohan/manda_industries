@@ -55,7 +55,7 @@ function Airbubble() {
 
     return (
         <section>
-            <HeroBanner lableText="Air Bubble" />
+            <HeroBanner lableText="Air Bubble" imgURL='https://res.cloudinary.com/hpnoardgude/image/upload/v1731602827/air_bubble_roll-2_fk4ppt.jpg'/>
 
             <div className="md:flex xl:flex whitespace border max-container bg-white airbubble_section gap-14" style={{ overflowX: 'hidden' }}>
                 <div className="w-full md:w-1/3  flex flex-col justify-center gap-20 bg-gray-400 rounded-md px-10 py-5" data-aos="fade-right">
