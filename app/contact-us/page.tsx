@@ -26,7 +26,7 @@ const Contact = () => {
   if (!isMounted) return null;
 
   return (
-      <section className="mb-14">
+      <section className="mb-14 overFlow">
         <HeroBanner lableText="Contact Us" />
         <h2 className="text-center text-3xl font-krona mt-10 mb-8">Contact Details</h2>
 
